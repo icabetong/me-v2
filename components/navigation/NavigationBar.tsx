@@ -20,7 +20,7 @@ const Navigation = () => {
           <MenuIcon className="h-5 w-5"/>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
             { 
               routes.map((route) => <NavigationLink key={route} route={route}/>)
             }
