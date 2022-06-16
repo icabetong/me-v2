@@ -1,3 +1,8 @@
 {
-  "header_greet": "Hi, I'm <focus>{{me}}</focus>"
+  "section_about": "About",
+  "section_skills": "Skills",
+  "section_works": "Works",
+  "section_contact": "Contact",
+  "hero_greet": "Hi!, I'm",
+  "hero-summary": "Whether developing native mobile apps, using cross platform frameworks or a full-stack web applications, I got you covered."
 }
