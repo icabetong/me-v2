@@ -51,25 +51,31 @@ const Navigation = () => {
             className="flex items-center">
             <motion.span variants={name} className="font-semibold text-xl">{data.domain}</motion.span>
           </motion.a>
-          <motion.button 
-            type="button"
-            data-collapse-toggle="mobile-menu"  
-            className="inline-flex items-center p-2 ml-3 text-sm bg-tran text-gray-300 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-navajo-white"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            onClick={onHandleMenu}>
-            <span className="sr-only">Open main menu</span>
-            <MenuIcon className={`h-5 w-5 ${!open ? "block" : "hidden"}`}/>
-            <XIcon className={`h-5 w-5 ${open ? "block" : "hidden"}`}/>
-          </motion.button>   
-          <div className='w-full hidden md:block md:w-auto'>
+          <motion.div
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 2.6 }}
+            className="md:hidden">
+            <motion.button 
+              type="button"
+              data-collapse-toggle="mobile-menu"  
+              className="inline-flex items-center p-2 ml-3 text-sm bg-tran text-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-navajo-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
+              onClick={onHandleMenu}>
+              <span className="sr-only">Open main menu</span>
+              <MenuIcon className={`h-5 w-5 ${!open ? "block" : "hidden"}`}/>
+              <XIcon className={`h-5 w-5 ${open ? "block" : "hidden"}`}/>
+            </motion.button> 
+          </motion.div>  
+          <div className="w-full hidden md:block md:w-auto">
           {list}
           </div>
         </div>
         <motion.div
-          animate={{ scale: open ? 1 : 0 }} 
+          animate={{ scale: open ? 1 : 0 }}
           className={`${open ? 'block' : 'hidden'} bg-content w-full md:hidden md:w-auto rounded`} id="nav-menu">
           {list}
         </motion.div>

@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import Navigation from '../components/navigation/Navigation'
 
-import HeroSection from "../components/sections/HeroSection"
+import HeroSection from '../components/sections/HeroSection'
+import AboutSection from '../components/sections/AboutSection'
+import SkillsSection from '../components/sections/SkillsSection'
 import { LocaleProps } from '../shared/types'
 
 const Home: NextPage = () => {
@@ -24,6 +26,8 @@ const Home: NextPage = () => {
         <div className="absolute inset-0 h-fit">
           <Navigation/>
         </div>
+        <AboutSection/>
+        <SkillsSection/>
       </main>
     </>
   )

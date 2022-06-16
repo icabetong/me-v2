@@ -4,9 +4,9 @@ import { loadSlim } from "tsparticles-slim"
 import { Engine } from "tsparticles-engine"
 import { motion } from "framer-motion"
 import { DownloadIcon } from "@heroicons/react/outline"
+import { FiGithub, FiLinkedin } from "react-icons/fi"
 
 import Box from "../core/Box"
-import Section from "../core/Section"
 import particlesConfig from "../../shared/particles/config"
 import data from "../../data/common"
 
@@ -23,7 +23,7 @@ const HeroSection = () => {
   }
 
   return (
-    <Section className="relative">
+    <section className="relative">
       <Particles
         id="hero-background"
         init={onParticlesStart} 
@@ -31,7 +31,7 @@ const HeroSection = () => {
         className="h-full object-cover absolute w-full"
         canvasClassName="will-change-auto h-full"/>
       <Box className="relative">
-        <div className="py-60 px-4">
+        <div className="py-40 md:py-60 px-4">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -71,11 +71,39 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.2 }}>
+              transition={{ delay: 2.2 }}
+              className="flex flex-row items-center justify-start space-x-4 mt-8">
               <motion.a
+                target="_blank"
+                role="link"
+                rel="noopener"
+                href={data.github}
+                aria-label="GitHub"
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
+                className="p-2 text-lg rounded-lg hover:bg-navajo-white hover:text-russian">
+                <FiGithub/>
+              </motion.a>
+              <motion.a
+                target="_blank"
+                role="link"
+                rel="noopener"
+                aria-label="LinkedIn"
+                href={data.linkedin}
+                whileHover={{ scale: 1.4 }}
+                whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
+                className="p-2 text-lg rounded-lg hover:bg-navajo-white hover:text-russian">
+                <FiLinkedin/>
+              </motion.a>
+              <span className="text-gray-500 font-medium">{t("misc.or")}</span>
+              <motion.a
+                target="_blank"
+                role="link"
+                rel="noopener"
+                href={data.resume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-                className="w-fit mt-8 px-4 py-2 rounded-full bg-navajo-white text-russian flex flex-row items-center justify-center cursor-pointer">
+                className="w-fit mx-2 px-4 py-2 rounded-full bg-navajo-white text-russian flex flex-row items-center justify-center cursor-pointer">
                 <span className="mx-2 font-semibold font-inter">
                   {t("button.download-resume")}
                 </span>
@@ -85,7 +113,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </Box>
-    </Section>
+    </section>
   )
 }
 
