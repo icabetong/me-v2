@@ -8,6 +8,8 @@ import Navigation from '../components/navigation/Navigation'
 import HeroSection from '../components/sections/HeroSection'
 import AboutSection from '../components/sections/AboutSection'
 import SkillsSection from '../components/sections/SkillsSection'
+import WorksSection from '../components/sections/WorksSection'
+import ContactSection from '../components/sections/ContactSection'
 import { LocaleProps } from '../shared/types'
 
 const Home: NextPage = () => {
@@ -28,6 +30,8 @@ const Home: NextPage = () => {
         </div>
         <AboutSection/>
         <SkillsSection/>
+        <WorksSection/>
+        <ContactSection/>
       </main>
     </>
   )

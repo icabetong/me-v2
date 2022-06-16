@@ -11,12 +11,24 @@
     "works": "Works",
     "contact": "Contact"
   },
+  "dev": {
+    "android": "Android",
+    "kotlin": "Kotlin",
+    "java": "Java",
+    "flutter": "Flutter",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "sql": "SQL",
+    "mongodb": "MongoDB",
+    "nodejs": "NodeJS",
+    "reactjs": "ReactJS"
+  },
   "hero": {
     "greet": "Hi!, I'm",
     "summary": "Whether developing native mobile apps, using cross platform frameworks or a full-stack web applications, I got you covered."
   },
   "about": {
-    "intro": "I currently am being proficient in native Android development, developed some apps as sideprojects. You can check them out on my GitHub profile.\n\nHowever, I am also acquainted in web development, being done my thesis project using web technologies such as React and NodeJS.\n\nCurrently I am exploring the world of cross platforms development using the relatively new Flutter framework; and I currently enjoy it."
+    "intro": "I currently am being proficient in native Android development, developed some apps as sideprojects. You can check them out on my GitHub profile.\nHowever, I am also acquainted in web development, being done my thesis project using web technologies such as React and NodeJS.\nCurrently I am exploring the world of cross platforms development using the relatively new Flutter framework; and I currently enjoy it."
   },
   "button": {
     "download-resume": "Download my Resume"

@@ -44,7 +44,7 @@ const HeroSection = () => {
                   staggerChildren: 0.4
                 }
               }}}>
-            <div className="flex flex-col py-0 flex-grow space-y-4">
+            <div className="flex flex-col py-0 flex-grow space-y-2 md:space-y-4">
               <motion.div 
                 variants={item} 
                 className="my-2 text-3xl font-firacode font-medium text-azureish-white">
