@@ -1,8 +1,15 @@
 {
-  "section_about": "About",
-  "section_skills": "Skills",
-  "section_works": "Works",
-  "section_contact": "Contact",
-  "hero_greet": "Hi!, I'm",
-  "hero-summary": "Whether developing native mobile apps, using cross platform frameworks or a full-stack web applications, I got you covered."
+  "section": {
+    "about": "about",
+    "skills": "skills",
+    "works": "works",
+    "contact": "contact"
+  },
+  "hero": {
+    "greet": "Hi!, I'm",
+    "summary": "Whether developing native mobile apps, using cross platform frameworks or a full-stack web applications, I got you covered."
+  },
+  "button": {
+    "download-resume": "Download my Resume"
+  }
 }
