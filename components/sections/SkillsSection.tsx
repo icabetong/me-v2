@@ -35,7 +35,7 @@ const SkillsSection = () => {
                 opacity: 1,
                 transition: {
                   type: "spring",
-                  bounce: 0.6,
+                  bounce: 0.2,
                   duration: 2,
                 }
               }
@@ -55,8 +55,8 @@ const SkillsSection = () => {
                 opacity: 1,
                 scale: 1,
                 transition: {
-                  delayChildren: 0.8,
-                  staggerChildren: 0.2
+                  delayChildren: 0.4,
+                  staggerChildren: 0.1
                 }
               }
             }}
@@ -66,6 +66,7 @@ const SkillsSection = () => {
                 return (
                   <motion.li 
                     key={skill}
+                    whileHover={{ scale: 1.1, color: "#ACDBFF" }}
                     variants={{
                       hidden: { y: 20, opacity: 0 },
                       visible: {

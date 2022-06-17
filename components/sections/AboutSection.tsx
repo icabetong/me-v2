@@ -106,6 +106,8 @@ const AboutSection = () => {
                 <Image
                   src={me} 
                   alt={t('alt.profile')}
+                  width="256"
+                  height="256"
                   className="rounded-xl"/>
               </motion.div>
             </div>

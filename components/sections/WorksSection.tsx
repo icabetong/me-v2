@@ -91,7 +91,8 @@ const WorksSection = () => {
                       name={project.name}
                       control={mobileAnim}
                       description={project.description}
-                      image={project.image}/>
+                      image={project.image}
+                      repo={project.repo}/>
                   )
                 })
               }
@@ -111,7 +112,8 @@ const WorksSection = () => {
                       name={project.name}
                       control={webAnim}
                       description={project.description}
-                      image={project.image}/>
+                      image={project.image}
+                      repo={project.repo}/>
                   )
                 })
               }

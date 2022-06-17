@@ -7,16 +7,16 @@ import openauth from "../public/images/openauth.webp"
 export type Project = {
   image: StaticImageData,
   name: string,
-  description: string
+  description: string,
+  repo: string,
 }
 
 export const mobile: Project[] = [
-  { image: fokus, name: "fokus", description: "works.fokus" },
-  { image: coind, name: "coind", description: "works.coind" },
-  { image: openauth, name: "openauth", description: "works.openauth" },
-  
+  { image: fokus, name: "fokus", description: "works.fokus", repo: "https://github.com/icabetong/fokus-android" },
+  { image: coind, name: "coind", description: "works.coind", repo: "https://github.com/icabetong/coind" },
+  { image: openauth, name: "openauth", description: "works.openauth", repo: "https://github.com/icabetong/openauth" },
 ]
 
 export const web: Project[] = [
-  { image: movieous, name: "movieous", description: "works.movieous" },
+  { image: movieous, name: "movieous", description: "works.movieous", repo: "https://github.com/icabetong/movieous" },
 ]
