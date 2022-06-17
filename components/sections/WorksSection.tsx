@@ -19,12 +19,12 @@ const WorksSection = () => {
   const [mobileRef, mobileIsInView] = useInView({
     triggerOnce: true,
     root: null,
-    threshold: 1
+    threshold: 0.3
   })
   const [webRef, webIsInView] = useInView({
     triggerOnce: true,
     root: null,
-    threshold: 1
+    threshold: 0.5
   })
 
   useEffect(() => {
