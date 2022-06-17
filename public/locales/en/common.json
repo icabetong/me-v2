@@ -30,11 +30,21 @@
   "about": {
     "intro": "I currently am being proficient in native Android development, developed some apps as sideprojects. You can check them out on my GitHub profile.\nHowever, I am also acquainted in web development, being done my thesis project using web technologies such as React and NodeJS.\nCurrently I am exploring the world of cross platforms development using the relatively new Flutter framework; and I currently enjoy it."
   },
+  "works": {
+    "mobile-apps": "Mobile",
+    "web-apps": "Web",
+    "fokus": "Reminder app for tasks and events tailored specifically for students",
+    "coind": "A realtime crypocurrency information app built using Flutter.",
+    "openauth": "A beautiful, secure and simple authenticator app that supports multiple protocols and services",
+    "movieous": "A sample theater reservation client built using React and Chakra-UI"
+  },
   "button": {
-    "download-resume": "Download my Resume"
+    "download-resume": "Download my Resume",
+    "more-github": "See more on GitHub"
   },
   "alt": {
-    "profile": "Picture of Isaiah Collins Abetong"
+    "profile": "Picture of Isaiah Collins Abetong",
+    "screenshot": "Screenshot of {{name}}"
   },
   "misc": {
     "or": "or"
