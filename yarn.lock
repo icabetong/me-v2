@@ -156,6 +156,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@phntms/react-share@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@phntms/react-share/-/react-share-1.0.1.tgz#f6383b3595d00f2fb355af83732d2a9cd4b8db84"
+  integrity sha512-23u7UH/m1nuNIuxaj5RJVjYdGFP1K/VW4w5+VRCsKpyTuC6Q0c0TF5/HZe8b2V/RtYcP3m3Yeo17t5q9ARXXdQ==
+  dependencies:
+    is-absolute-url "^3.0.3"
+
 "@rushstack/eslint-patch@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
@@ -1273,6 +1280,11 @@ internal-slot@^1.0.3:
     get-intrinsic "^1.1.0"
     has "^1.0.3"
     side-channel "^1.0.4"
+
+is-absolute-url@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-3.0.3.tgz#96c6a22b6a23929b11ea0afb1836c36ad4a5d698"
+  integrity sha512-opmNIX7uFnS96NtPmhWQgQx6/NYFgsUXYMllcfzwWKUMwfo8kku1TvE6hkNcH+Q1ts5cMVrsY7j0bxXQDciu9Q==
 
 is-arrayish@^0.3.1:
   version "0.3.2"

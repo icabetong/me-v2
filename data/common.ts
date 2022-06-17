@@ -1,5 +1,6 @@
 export default {
   "domain": "icabetong.codes",
+  "desc": "Personal Portfolio website of Isaiah Collins Abetong",
   "name": "Isaiah Collins",
   "fullName": "Isaiah Collins A. Abetong",
   "position": "developer()",
