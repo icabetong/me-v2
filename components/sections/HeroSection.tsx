@@ -41,7 +41,7 @@ const HeroSection = () => {
                 opacity: 1,
                 transition: {
                   delayChildren: 0.8,
-                  staggerChildren: 0.4
+                  staggerChildren: 0.2
                 }
               }}}>
             <div className="flex flex-col py-0 flex-grow space-y-2 md:space-y-4">

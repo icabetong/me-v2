@@ -19,7 +19,7 @@ const Navigation = () => {
       scale: 1,
       transition: {
         delayChildren: 2.8,
-        staggerChildren: 0.6
+        staggerChildren: 0.2
       }
     }
   }
@@ -47,14 +47,14 @@ const Navigation = () => {
             href="#"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ delay: 2.4 }}
+            transition={{ delay: 2 }}
             className="flex items-center">
             <motion.span variants={name} className="font-semibold text-xl">{data.domain}</motion.span>
           </motion.a>
           <motion.div
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ delay: 2.6 }}
+            transition={{ delay: 2.4 }}
             className="md:hidden">
             <motion.button 
               type="button"

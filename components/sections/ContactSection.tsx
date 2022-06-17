@@ -53,18 +53,15 @@ const ContactSection = () => {
             className="text-lg text-center font-inter">
             {t("contact.summary")}
           </motion.h6>
-          <motion.div
-            variants={itemVariants}
-            className="p-6">
-            <motion.a
-              href={data.mail}
-              target="_blank"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9, x: '-2px', y: '2px' }}
-              className="py-4 px-20 bg-navajo-white text-russian text-lg font-inter font-semibold rounded-full">
-              {t("button.say-hello")}
-            </motion.a>
-          </motion.div>
+          <motion.a
+          variants={itemVariants}
+            href={data.mail}
+            target="_blank"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9, x: '-2px', y: '2px' }}
+            className="mt-8 py-4 px-20 bg-navajo-white text-russian text-lg font-inter font-semibold rounded-full">
+            {t("button.say-hello")}
+          </motion.a>
         </motion.div>
       </Box>
     </section>
