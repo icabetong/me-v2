@@ -14,7 +14,7 @@ const WorksSection = () => {
   const [headingRef, headingIsInView] = useInView({
     triggerOnce: true,
     root: null,
-    threshold: 0.5
+    threshold: 0.3
   })
   const [mobileRef, mobileIsInView] = useInView({
     triggerOnce: true,
