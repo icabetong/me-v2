@@ -21,14 +21,14 @@ const Home: NextPage = () => {
       <Head>
         <title>icabetong</title>
         <meta name="theme-color" content="#0E0E14" />
-        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
-        <link rel="apple-touch-icon" href="static/logo192.png" />
-        <link rel="manifest" href="static/manifest.json" />
-        <meta name="description" content={data.desc} />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="description" content="Personal Portfolio website of Isaiah Collins Abetong" />
       </Head>
       <MetaHeadEmbed 
         render={(meta: ReactNode) => <Head>{meta}</Head>}
-        siteTitle={data.domain} 
+        siteTitle={data.site} 
         description={data.desc} 
         baseSiteUrl={`https://${data.domain}`}
         pagePath=""

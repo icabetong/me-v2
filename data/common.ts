@@ -1,4 +1,5 @@
 export default {
+  "site": "icabetong",
   "domain": "icabetong.codes",
   "desc": "Personal Portfolio website of Isaiah Collins Abetong",
   "name": "Isaiah Collins",
