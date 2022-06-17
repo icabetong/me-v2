@@ -18,9 +18,11 @@ module.exports = {
         "cornfields": "#FFF9B8",
         "azureish-white": "#DBEDF3",
         "navajo-white": "#ACDBFF",
-        "content": "#17171F"
+        "content": "#17171F",
+        "footer": "#060609"
       },
     }
   },
   plugins: [],
 }
+//"footer": "#282836",

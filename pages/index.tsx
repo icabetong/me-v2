@@ -10,6 +10,7 @@ import AboutSection from '../components/sections/AboutSection'
 import SkillsSection from '../components/sections/SkillsSection'
 import WorksSection from '../components/sections/WorksSection'
 import ContactSection from '../components/sections/ContactSection'
+import Footer from '../components/Footer'
 import { LocaleProps } from '../shared/types'
 
 const Home: NextPage = () => {
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
         <SkillsSection/>
         <WorksSection/>
         <ContactSection/>
+        <Footer/>
       </main>
     </>
   )

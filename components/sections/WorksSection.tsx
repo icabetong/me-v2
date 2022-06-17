@@ -14,7 +14,7 @@ const WorksSection = () => {
   const [headingRef, headingIsInView] = useInView({
     triggerOnce: true,
     root: null,
-    threshold: 1
+    threshold: 0.5
   })
   const [mobileRef, mobileIsInView] = useInView({
     triggerOnce: true,
@@ -47,7 +47,7 @@ const WorksSection = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.8,
+        delayChildren: 1,
         staggerChildren: 0.2
       }
     }
@@ -56,9 +56,8 @@ const WorksSection = () => {
   return (
     <section id="works" className="bg-content relative">
       <Box className="py-32">
-        <div className="mx-14 md:mx-24">
+        <div ref={headingRef} className="mx-14 md:mx-24">
           <motion.h2
-            ref={headingRef}
             initial="hidden"
             animate={headingAnim}
             variants={{
@@ -70,7 +69,7 @@ const WorksSection = () => {
                   delay: 0.4,
                   type: "spring",
                   bounce: 0.6,
-                  duration: 1.4
+                  duration: 0.8
                 }
               }
             }} 

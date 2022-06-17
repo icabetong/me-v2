@@ -21,7 +21,7 @@ const SkillsSection = () => {
   }, [control, inView])
 
   return (
-    <section id="skills">
+    <section id="skills" className="relative">
       <Box className="py-16 md:py-32 flex flex-col items-center justify-center md:flex-row">
         <div ref={ref} className="flex-initial md:ml-24">
           <motion.h2 

@@ -8,8 +8,7 @@
   "section": {
     "about": "About",
     "skills": "Skills",
-    "works": "Works",
-    "contact": "Contact"
+    "works": "Works"
   },
   "dev": {
     "android": "Android",
@@ -22,6 +21,10 @@
     "mongodb": "MongoDB",
     "nodejs": "NodeJS",
     "reactjs": "ReactJS"
+  },
+  "contact": {
+    "header": "Get in Touch",
+    "summary": "Interested in working together? We should queue up a chat."
   },
   "hero": {
     "greet": "Hi!, I'm",
@@ -40,13 +43,15 @@
   },
   "button": {
     "download-resume": "Download my Resume",
-    "more-github": "See more on GitHub"
+    "more-github": "See more on GitHub",
+    "say-hello": "Say Hello!"
   },
   "alt": {
     "profile": "Picture of Isaiah Collins Abetong",
     "screenshot": "Screenshot of {{name}}"
   },
   "misc": {
-    "or": "or"
+    "or": "or",
+    "copyright": "© 2021 <focus>{{me}}</focus>. All rights reserved."
   }
 }

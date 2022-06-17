@@ -14,7 +14,7 @@ const AboutSection = () => {
   const control = useAnimation()
   const [ref, isInView] = useInView({
     root: null,
-    threshold: 1
+    threshold: 0.6
   })
 
   useEffect(() => {
