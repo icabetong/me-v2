@@ -9,7 +9,6 @@ import data from "../../data/data.json"
 import useBreakpoint from "../../shared/hooks/useBreakpoint"
 import me from "../../public/images/me.webp"
 
-
 const AboutSection = () => {
   const { t } = useTranslation('common')
   const smBreakpoint = useBreakpoint('sm')

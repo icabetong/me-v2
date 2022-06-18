@@ -12,7 +12,6 @@ import SkillsSection from '../components/sections/SkillsSection'
 import WorksSection from '../components/sections/WorksSection'
 import ContactSection from '../components/sections/ContactSection'
 import Footer from '../components/Footer'
-import { LocaleProps } from '../shared/types'
 import data from '../data/data.json'
 
 const Home: NextPage = () => {
@@ -62,7 +61,9 @@ const Home: NextPage = () => {
   )
 }
 
-type HomeProps = LocaleProps
+type HomeProps = {
+  locale: string
+}
 export const getStaticProps = async ({ locale }: HomeProps) => ({
   props: {
     ...await serverSideTranslations(locale, ['common'])

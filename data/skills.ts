@@ -8,7 +8,7 @@ import {
   SiMysql,
   SiMongodb,
   SiNodedotjs,
-  SiReact,
+  SiReact
 } from "react-icons/si";
 
 export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs"

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Breakpoint } from '../types'
+
+export type Breakpoint = "sm" | "md" | "lg" | "xl" | "2xl"
 
 export default function useBreakpoint(breakpoint: Breakpoint) {
   const [isMatch, setMatch] = useState(false)
