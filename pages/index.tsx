@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { MetaHeadEmbed } from '@phntms/react-share'
+import MetaHeadEmbed from '@phntms/react-share/lib/components/MetaHeadEmbed'
 
 import Navigation from '../components/navigation/Navigation'
 
