@@ -1,9 +1,8 @@
+import React from "react"
 import { useTranslation } from "next-i18next"
 import Image, { StaticImageData } from "next/image"
 import { motion } from "framer-motion"
-import { FiGithub } from "react-icons/fi"
 import { IconType } from "react-icons"
-import React from "react"
 import { SiGithub } from "react-icons/si"
 
 type CardProps = {

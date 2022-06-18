@@ -2,9 +2,9 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"
 
-import Box from "../core/Box"
 import { Route } from "./Route"
 import NavigationLink from "./NavigationLink"
+import Box from "../core/Box"
 import data from "../../data/data.json"
 
 const routes: Route[] = ["about", "skills", "works", "contact"]

@@ -9,7 +9,6 @@ import {
   SiMongodb,
   SiNodedotjs,
   SiReact,
-  SiExpress,
 } from "react-icons/si";
 
 export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs"
