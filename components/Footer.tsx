@@ -43,7 +43,8 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian">
+            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            aria-label="GitHub">
             <FiGithub/>
           </motion.a>
           <motion.a 
@@ -51,7 +52,8 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian">
+            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            aria-label="LinkedIn">
             <FiLinkedin/>
           </motion.a>
           <motion.a 
@@ -59,7 +61,8 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian">
+            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            aria-label="Email">
             <FiMail/>
           </motion.a>
           <motion.a 
@@ -67,7 +70,8 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian">
+            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            aria-label="Twitter">
             <FiTwitter/>
           </motion.a>
           <motion.a 
@@ -75,18 +79,19 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian">
+            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            aria-label="Instagram">
             <FiInstagram/>
           </motion.a>
         </motion.div>
-        <span className="mt-4 font-inter text-gray-500 text-center">
+        <span className="mt-4 font-inter text-gray-400 text-center">
           <Trans
             i18nKey={t("misc.copyright")}
             values={{
               me: data.fullName
             }}
             components={{
-              focus: <span className="text-azureish-white font-medium"/>
+              focus: <span className="text-azureish-white font-semibold"/>
             }}/>
         </span>
       </Box>

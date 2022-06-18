@@ -2,15 +2,26 @@ import { useEffect } from "react"
 import { useTranslation } from "next-i18next"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
-import ProjectCard from "../ProjectCard"
+
+import { SiAndroid, SiKotlin, SiFlutter, SiReact, SiJavascript, SiDart } from "react-icons/si"
+
+import Card from "../Card"
 import Box from "../core/Box"
-import { mobile, web } from "../../data/projects"
+import useBreakpoint from "../../shared/hooks/useBreakpoint"
+
+import data from "../../data/projects.json"
+
+import fokus from "../../public/images/fokus.webp"
+import coind from "../../public/images/coind.webp"
+import movieous from "../../public/images/movieous.webp"
+import openauth from "../../public/images/openauth.webp"
 
 const WorksSection = () => {
   const { t } = useTranslation()
   const headingAnim = useAnimation()
   const mobileAnim = useAnimation()
   const webAnim = useAnimation()
+  const smBreakpoint = useBreakpoint('sm')
   const [headingRef, headingIsInView] = useInView({
     triggerOnce: true,
     root: null,
@@ -18,13 +29,11 @@ const WorksSection = () => {
   })
   const [mobileRef, mobileIsInView] = useInView({
     triggerOnce: true,
-    root: null,
-    threshold: 0.3
+    threshold: smBreakpoint ? 0.4 : 0.02
   })
   const [webRef, webIsInView] = useInView({
     triggerOnce: true,
-    root: null,
-    threshold: 0.5
+    threshold: smBreakpoint ? 0.4 : 0.02
   })
 
   useEffect(() => {
@@ -83,19 +92,24 @@ const WorksSection = () => {
               animate={mobileAnim}
               variants={listVariants}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {
-                mobile.map((project) => {
-                  return (
-                    <ProjectCard
-                      key={project.name}
-                      name={project.name}
-                      control={mobileAnim}
-                      description={project.description}
-                      image={project.image}
-                      repo={project.repo}/>
-                  )
-                })
-              }
+              <Card
+                name={data.fokus.name}
+                description={data.fokus.description}
+                image={fokus}
+                frameworks={[SiAndroid, SiKotlin]}
+                repo={data.fokus.repo}/>
+              <Card
+                name={data.coind.name}
+                description={data.coind.description}
+                image={coind}
+                frameworks={[SiFlutter, SiDart]}
+                repo={data.coind.repo}/>
+              <Card
+                name={data.openauth.name}
+                description={data.openauth.description}
+                image={openauth}
+                frameworks={[SiFlutter, SiDart]}
+                repo={data.openauth.repo}/>
             </motion.ul>
             <div className="py-8"/>
             <motion.ul
@@ -104,19 +118,12 @@ const WorksSection = () => {
               animate={webAnim}
               variants={listVariants}
               className="grid grid-cols-1">
-              {
-                web.map((project) => {
-                  return (
-                    <ProjectCard
-                      key={project.name}
-                      name={project.name}
-                      control={webAnim}
-                      description={project.description}
-                      image={project.image}
-                      repo={project.repo}/>
-                  )
-                })
-              }
+              <Card
+                name={data.movieous.name}
+                description={data.movieous.description}
+                image={movieous}
+                frameworks={[SiReact, SiJavascript]}
+                repo={data.movieous.repo}/>
             </motion.ul>
           </div>
         </div>

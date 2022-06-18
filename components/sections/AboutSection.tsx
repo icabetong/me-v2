@@ -6,15 +6,17 @@ import { useInView } from "react-intersection-observer"
 
 import Box from "../core/Box"
 import data from "../../data/common"
+import useBreakpoint from "../../shared/hooks/useBreakpoint"
 import me from "../../public/images/me.webp"
 
 
 const AboutSection = () => {
   const { t } = useTranslation('common')
+  const smBreakpoint = useBreakpoint('sm')
   const control = useAnimation()
   const [ref, isInView] = useInView({
     root: null,
-    threshold: 0.6
+    threshold: smBreakpoint ? 0.6 : 0.1
   })
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const AboutSection = () => {
           </motion.h2>
           <div className="flex flex-col-reverse items-center justify-center lg:flex-row mt-8 mx-14 lg:mx-24">
             <div className="flex-3 flex flex-col items-center justify-center lg:items-start lg:mr-14">
-              <motion.h6 
+              <motion.div
                 initial="hidden"
                 animate={control}
                 variants={{
@@ -64,7 +66,7 @@ const AboutSection = () => {
                 }}
                 className="max-w-sm mt-8 text-3xl text-aquamarine font-firacode mb-8 text-center lg:mt-0 lg:text-start md:text-4xl">
                 {data.fullName}
-              </motion.h6>
+              </motion.div>
               { 
                 intro.split('\n').map((paragraph) => {
                   return (
@@ -81,7 +83,7 @@ const AboutSection = () => {
                         }
                       }}
                       key={paragraph} 
-                      className="text-lg font-inter my-2">
+                      className="text-lg text-center lg:text-start font-inter my-2 lg:mr-8">
                       {paragraph}
                     </motion.p>
                   )

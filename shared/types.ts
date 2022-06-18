@@ -9,3 +9,5 @@ export type SectionProps = {
 export type LocaleProps = {
   locale: string
 }
+
+export type Breakpoint = "sm" | "md" | "lg" | "xl" | "2xl"

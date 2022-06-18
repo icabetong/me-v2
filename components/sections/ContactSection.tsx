@@ -48,11 +48,11 @@ const ContactSection = () => {
             className="mb-4 text-4xl text-navajo-white text-center font-inter font-semibold">
             {t("contact.header")}
           </motion.h2>
-          <motion.h6 
+          <motion.p
             variants={itemVariants}
             className="text-lg text-center font-inter">
             {t("contact.summary")}
-          </motion.h6>
+          </motion.p>
           <motion.a
           variants={itemVariants}
             href={data.mail}

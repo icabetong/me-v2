@@ -24,11 +24,6 @@ const Navigation = () => {
     }
   }
 
-  const name = {
-    hidden: { x: -20, opacity: 0 },
-    visible: { x: 0, opacity: 1 }
-  }
-
   const list = (
     <motion.ul
       variants={navigationContainer}
@@ -45,11 +40,11 @@ const Navigation = () => {
         <div className="container flex flex-wrap justify-between items-center mx-auto px-4 py-4">
           <motion.a 
             href="#"
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 2 }}
-            className="flex items-center">
-            <motion.span variants={name} className="font-semibold text-xl">{data.domain}</motion.span>
+            className="flex items-center font-semibold text-xl">
+            {data.domain}
           </motion.a>
           <motion.div
             initial={{ y: -100 }}
@@ -62,6 +57,9 @@ const Navigation = () => {
               className="inline-flex items-center p-2 ml-3 text-sm bg-tran text-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-navajo-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
+              initial={{ x: -200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 2 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
               onClick={onHandleMenu}>

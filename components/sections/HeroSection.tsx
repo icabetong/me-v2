@@ -52,7 +52,7 @@ const HeroSection = () => {
               </motion.div>
               <motion.div 
                 variants={item} 
-                className="mb-4 text-7xl font-firacode font-medium text-aquamarine">
+                className="mb-4 text-6xl md:text-7xl font-firacode font-medium text-aquamarine">
                 {data.name}
               </motion.div>
               <motion.div 
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
                 className="w-fit mx-2 px-4 py-2 rounded-full bg-navajo-white text-russian flex flex-row items-center justify-center cursor-pointer">
-                <span className="mx-2 font-semibold font-inter">
+                <span className="mx-2 font-semibold font-inter text-center">
                   {t("button.download-resume")}
                 </span>
                 <DownloadIcon className="w-6 h-6 inline-block"/>

@@ -1,0 +1,22 @@
+{
+  "fokus": {
+    "name": "fokus",
+    "description": "works.fokus",
+    "repo": "https://github.com/icabetong/fokus-android"
+  },
+  "coind": {
+    "name": "coind",
+    "description": "works.coind",
+    "repo": "https://github.com/icabetong/coind"
+  },
+  "openauth": {
+    "name": "openauth",
+    "description": "works.openauth",
+    "repo": "https://github.com/icabetong/openauth"
+  },
+  "movieous": {
+    "name": "movieous",
+    "description": "works.movieous",
+    "repo": "https://github.com/icabetong/movieous"
+  }
+}
