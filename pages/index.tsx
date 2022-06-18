@@ -13,7 +13,7 @@ import WorksSection from '../components/sections/WorksSection'
 import ContactSection from '../components/sections/ContactSection'
 import Footer from '../components/Footer'
 import { LocaleProps } from '../shared/types'
-import data from '../data/common'
+import data from '../data/data.json'
 
 const Home: NextPage = () => {
   return (

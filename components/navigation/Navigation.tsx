@@ -5,7 +5,7 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"
 import Box from "../core/Box"
 import { Route } from "./Route"
 import NavigationLink from "./NavigationLink"
-import data from "../../data/common"
+import data from "../../data/data.json"
 
 const routes: Route[] = ["about", "skills", "works", "contact"]
 const Navigation = () => {

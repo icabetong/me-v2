@@ -104,7 +104,7 @@ const Card = (props: CardProps) => {
         whileHover={{ scale: 1.1 }}
         className="flex flex-row items-center justify-center mt-4 px-4 py-2 bg-navajo-white text-russian font-inter font-semibold rounded-full cursor-pointer">
         <SiGithub/>
-        <span className="ml-2">{t("button.view-github")}</span>
+        <span className="ml-2 text-sm">{t("button.view-github")}</span>
       </motion.a>
     </motion.li>
   )

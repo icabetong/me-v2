@@ -8,7 +8,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi"
 
 import Box from "../core/Box"
 import particlesConfig from "../../shared/particles/config"
-import data from "../../data/common"
+import data from "../../data/data.json"
 
 const HeroSection = () => {
   const { t } = useTranslation('common')

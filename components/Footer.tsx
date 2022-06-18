@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { Trans, useTranslation } from "next-i18next"
 import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiInstagram } from "react-icons/fi"
 import Box from "./core/Box"
-import data from "../data/common"
+import data from "../data/data.json"
 
 const Footer = () => {
   const { t } = useTranslation('common')

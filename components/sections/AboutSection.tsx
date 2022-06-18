@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
 import Box from "../core/Box"
-import data from "../../data/common"
+import data from "../../data/data.json"
 import useBreakpoint from "../../shared/hooks/useBreakpoint"
 import me from "../../public/images/me.webp"
 
