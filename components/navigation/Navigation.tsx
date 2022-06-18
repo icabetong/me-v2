@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { motion } from "framer-motion"
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"
 
 import Box from "../core/Box"
 import { Route } from "./Route"
@@ -64,8 +64,8 @@ const Navigation = () => {
               whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
               onClick={onHandleMenu}>
               <span className="sr-only">Open main menu</span>
-              <MenuIcon className={`h-5 w-5 ${!open ? "block" : "hidden"}`}/>
-              <XIcon className={`h-5 w-5 ${open ? "block" : "hidden"}`}/>
+              <HiOutlineMenu className={`h-5 w-5 ${!open ? "block" : "hidden"}`}/>
+              <HiOutlineX className={`h-5 w-5 ${open ? "block" : "hidden"}`}/>
             </motion.button> 
           </motion.div>  
           <div className="w-full hidden md:block md:w-auto">

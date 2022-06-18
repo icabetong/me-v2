@@ -3,7 +3,7 @@ import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim"
 import { Engine } from "tsparticles-engine"
 import { motion } from "framer-motion"
-import { DownloadIcon } from "@heroicons/react/outline"
+import { HiOutlineDownload } from "react-icons/hi"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 
 import Box from "../core/Box"
@@ -107,7 +107,7 @@ const HeroSection = () => {
                 <span className="mx-2 font-semibold font-inter text-center">
                   {t("button.download-resume")}
                 </span>
-                <DownloadIcon className="w-6 h-6 inline-block"/>
+                <HiOutlineDownload className="w-6 h-6 inline-block"/>
               </motion.a>
             </motion.div>
           </motion.div>
