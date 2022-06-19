@@ -20,7 +20,7 @@ const Footer = () => {
   }, [control, isInView])
 
   return (
-    <footer ref={ref} className="bg-footer relative min-h-md">
+    <footer ref={ref} className="bg-footer relative min-h-md py-8">
       <Box className="flex flex-col items-center justify-center">
         <motion.div
           initial="hidden"

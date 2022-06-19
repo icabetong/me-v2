@@ -1,10 +1,13 @@
 # me
-Portfolio website built using React with NextJS and Tailwind
+A minimalist portfolio website built using React.js with Next with the styling powers of TailwindCSS.
 
 ## Built with
-* React
-* NextJS
+* TypeScript
+* React.js
+* Next.js
 * TailwindCSS
+* Framer Motion
+* and other [cool libraries](https://github.com/icabetong/me/blob/main/package.json)
 
-## License
-This project is licensed under the GPL-3.0 - see the license file for more details
+## Forking/Cloning
+Please review the [license](https://github.com/icabetong/me/blob/main/LICENSE.txt) and remove all of my personal information (resume, images, etc.).

@@ -31,7 +31,7 @@ const HeroSection = () => {
         className="h-full object-cover absolute w-full"
         canvasClassName="will-change-auto h-full"/>
       <Box className="relative">
-        <div className="py-40 md:py-60 px-4">
+        <div className="py-40 md:py-60">
           <motion.div
             initial="hidden"
             animate="visible"

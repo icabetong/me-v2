@@ -89,7 +89,7 @@ const AboutSection = () => {
                 })
               }
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center md:justify-start md:pr-8">
+            <div className="flex-1 flex flex-col items-center justify-center">
               <motion.div  
                 initial="hidden"
                 animate={control}

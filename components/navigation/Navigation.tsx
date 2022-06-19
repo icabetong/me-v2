@@ -37,7 +37,7 @@ const Navigation = () => {
   return (
     <nav className="font-inter relative z-30 border-gray-200 rounded h-fit">
       <Box>
-        <div className="container flex flex-wrap justify-between items-center mx-auto px-4 py-4">
+        <div className="container flex flex-wrap justify-between items-center py-4">
           <motion.a 
             href="#"
             initial={{ x: -200, opacity: 0 }}
