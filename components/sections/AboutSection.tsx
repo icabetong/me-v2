@@ -10,7 +10,7 @@ import useBreakpoint from "../../shared/hooks/useBreakpoint"
 import me from "../../public/images/me.webp"
 
 const AboutSection = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   const smBreakpoint = useBreakpoint('sm')
   const control = useAnimation()
   const [ref, isInView] = useInView({

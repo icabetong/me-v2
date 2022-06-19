@@ -11,7 +11,7 @@ import particlesConfig from "../../shared/particles/config"
 import data from "../../data/data.json"
 
 const HeroSection = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
 
   const onParticlesStart = async (engine: Engine) => {
     loadSlim(engine)
