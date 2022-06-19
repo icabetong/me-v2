@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import Link from "next/link"
 import { motion } from "framer-motion"
 import { Route } from "./Route"
 import useBreakpoint from "../../shared/hooks/useBreakpoint"
@@ -20,9 +19,12 @@ const NavigationLink = (props: NavigationLinkProps) => {
       variants={items}
       whileHover={{ scale: mdBreakpoint ? 1.1 : 1 }}
       className="p-2 my-2 rounded-md hover:bg-navajo-white md:hover:bg-transparent text-azureish-white hover:text-russian md:hover:text-navajo-white md:p-0 md:mx-0">
-      <Link href={`#${props.route}`} className="block text-md py-2 pr-4 pl-3 rounded md:bg-transparent md:p-0" aria-current="page">
-        <a>{t(`navigation.${props.route}`)}</a>
-      </Link>
+      <a 
+        href={`#${props.route}`} 
+        className="w-full block text-md py-1 pr-4 pl-3 rounded md:bg-transparent md:p-0"
+        aria-current="page">
+        {t(`navigation.${props.route}`)}
+      </a>
     </motion.li>
   )
 }
