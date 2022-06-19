@@ -8,10 +8,12 @@ import {
   SiMysql,
   SiMongodb,
   SiNodedotjs,
-  SiReact
+  SiReact,
+  SiNextdotjs,
+  SiExpress
 } from "react-icons/si";
 
-export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs"
+export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs" | "nextjs" | "expressjs"
 
 export const skills: Skill[] = [
   "android",
@@ -23,7 +25,9 @@ export const skills: Skill[] = [
   "sql",
   "mongodb",
   "nodejs",
-  "reactjs"
+  "reactjs",
+  "nextjs",
+  "expressjs"
 ]
 
 export function getIcon(skill: Skill) {
@@ -48,5 +52,9 @@ export function getIcon(skill: Skill) {
       return SiNodedotjs
     case "reactjs":
       return SiReact
+    case "nextjs":
+      return SiNextdotjs
+    case "expressjs":
+      return SiExpress
   }
 }

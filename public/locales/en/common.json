@@ -20,7 +20,9 @@
     "sql": "SQL",
     "mongodb": "MongoDB",
     "nodejs": "NodeJS",
-    "reactjs": "ReactJS"
+    "reactjs": "ReactJS",
+    "nextjs": "NextJS",
+    "expressjs": "ExpressJS"
   },
   "contact": {
     "header": "Get in Touch",

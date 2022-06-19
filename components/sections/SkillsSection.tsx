@@ -76,7 +76,7 @@ const SkillsSection = () => {
                     }}
                     className="flex flex-col items-center justify-center p-4">
                     {React.createElement(getIcon(skill), { className: "text-2xl mb-4" })}
-                    <span>{t(`dev.${skill}`)}</span>
+                    <span className="font-inter">{t(`dev.${skill}`)}</span>
                   </motion.li>
                 )
               })
