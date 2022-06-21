@@ -24,7 +24,6 @@ export default function Document() {
         <meta property="og:url" content={data.url} />
         <meta property="og:image" content={data.image} />
         <meta property="og:imageAlt" content="Isaiah Collins Abetong Portfolio Site Image"/>
-        <meta property="og:description" content="Site description" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@icabetong" />

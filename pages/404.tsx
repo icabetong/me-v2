@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { motion } from 'framer-motion'
+import data from '../data/data.json'
 
 const NotFound: NextPage = () => {
   const { t } = useTranslation('404')
@@ -12,6 +13,7 @@ const NotFound: NextPage = () => {
     <>
       <Head>
         <title>{t("header")}</title>
+        
       </Head>
       <div className="flex flex-col md:flex-row items-center justify-center w-screen h-screen bg-russian text-azureish-white font-inter px-12">
         <h1 className="text-8xl mb-8">404</h1>
