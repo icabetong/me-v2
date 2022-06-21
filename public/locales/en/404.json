@@ -1,5 +1,6 @@
 {
-  "header": "Page not found",
-  "summary": "Ironically, you found a page that doesn't exist. Try going back to the previous page or recheck the URL if it's correct.",
-  "back-to-home": "Back to Home"
+  "title": "Page not found",
+  "header": "You have found a secret place",
+  "summary": "Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has been moved to another URL.",
+  "back-to-home": "Take me back to home page"
 }
