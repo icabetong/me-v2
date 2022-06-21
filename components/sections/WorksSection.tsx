@@ -29,7 +29,7 @@ const WorksSection = () => {
   })
   const [mobileRef, mobileIsInView] = useInView({
     triggerOnce: true,
-    threshold: smBreakpoint ? 0.4 : 0.02
+    threshold: smBreakpoint ? 0.4 : undefined
   })
   const [webRef, webIsInView] = useInView({
     triggerOnce: true,
