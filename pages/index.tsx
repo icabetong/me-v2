@@ -1,11 +1,8 @@
-import { ReactNode } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import MetaHeadEmbed from '@phntms/react-share/lib/components/MetaHeadEmbed'
 
 import Navigation from '../components/navigation/Navigation'
-
 import HeroSection from '../components/sections/HeroSection'
 import AboutSection from '../components/sections/AboutSection'
 import SkillsSection from '../components/sections/SkillsSection'
@@ -18,34 +15,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>icabetong</title>
-        <meta name="theme-color" content="#0E0E14" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="Personal Portfolio website of Isaiah Collins Abetong" />
+        <title>{data.site}</title>
       </Head>
-      <MetaHeadEmbed 
-        render={(meta: ReactNode) => <Head>{meta}</Head>}
-        siteTitle={data.site} 
-        description={data.desc} 
-        baseSiteUrl={`https://${data.domain}`}
-        pagePath=""
-        keywords={[
-          "isaiah abetong",
-          "isaiah collins abetong",
-          "central luzon state university",
-          "web development",
-          "mobile development",
-          "app development"
-        ]}
-        imageUrl="https://raw.githubusercontent.com/icabetong/me/main/public/images/image-meta.png"
-        imageAlt="Isaiah Collins Abetong Portfolio Site Image"
-        twitter={{
-          cardSize: "large",
-          siteUsername: "@icabetong",
-          creatorUsername: "@icabetong"
-        }}/>
       <main className="relative bg-russian text-azureish-white min-h-screen mx-auto">
         <HeroSection/>
         <div className="absolute inset-0 h-fit">

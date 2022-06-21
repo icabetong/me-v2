@@ -76,6 +76,7 @@ const Card = (props: CardProps) => {
       className="flex flex-col items-center justify-baseline">
       <div className="h-76 overflow-hidden">
         <Image 
+          priority
           src={props.image}
           alt={t("alt.screenshot", { name: props.name })}/>
       </div>

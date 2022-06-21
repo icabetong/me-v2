@@ -1,5 +1,6 @@
 {
   "site": "icabetong",
+  "url": "https://www.icabetong.codes",
   "domain": "icabetong.codes",
   "desc": "Personal Portfolio website of Isaiah Collins Abetong",
   "name": "Isaiah Collins",
@@ -10,5 +11,6 @@
   "github": "https://www.github.com/icabetong",
   "mail": "mailto:isaiahcollins_02@live.com",
   "twitter": "https://www.twitter.com/icabetong",
-  "instagram": "https://www.instagram.com/izayakorinzu/"
+  "instagram": "https://www.instagram.com/izayakorinzu/",
+  "image": "https://raw.githubusercontent.com/icabetong/me/main/public/images/image-meta.png"
 }
