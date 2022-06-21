@@ -11,6 +11,7 @@ export default function Document() {
         <link rel="manifest" href="/manifest.json" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
+        <meta name="description" content={data.desc}/>
         <meta name="author" content={data.fullName}/>
         <meta name="keywords" content="isaiah abetong, isaiah collins abetong, central luzon state university, clsu, web development, mobile development, app development, nueva ecija"/>
         <meta name="robots" content="all"/>
