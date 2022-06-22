@@ -9,6 +9,9 @@ export default function Document() {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
         <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel="manifest" href="/manifest.json" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
         <meta name="description" content={data.desc}/>
