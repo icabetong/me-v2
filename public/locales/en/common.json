@@ -22,7 +22,8 @@
     "nodejs": "NodeJS",
     "reactjs": "ReactJS",
     "nextjs": "NextJS",
-    "expressjs": "ExpressJS"
+    "expressjs": "ExpressJS",
+    "vuejs": "Vue"
   },
   "contact": {
     "header": "Get in Touch",
