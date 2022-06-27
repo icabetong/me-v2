@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
-import { SiAndroid, SiKotlin, SiFlutter, SiReact, SiJavascript, SiDart } from "react-icons/si"
+import { SiAndroid, SiKotlin, SiFlutter, SiReact, SiJavascript, SiDart, SiTypescript, SiNextdotjs } from "react-icons/si"
 
 import Card from "../Card"
 import Box from "../core/Box"
@@ -15,6 +15,7 @@ import fokus from "../../public/images/fokus.webp"
 import coind from "../../public/images/coind.webp"
 import movieous from "../../public/images/movieous.webp"
 import openauth from "../../public/images/openauth.webp"
+import zap from "../../public/images/zap.webp"
 
 const WorksSection = () => {
   const { t } = useTranslation()
@@ -117,13 +118,19 @@ const WorksSection = () => {
               initial="hidden"
               animate={webAnim}
               variants={listVariants}
-              className="grid grid-cols-1">
+              className="grid grid-cols-1 gap-8">
               <Card
                 name={data.movieous.name}
                 description={data.movieous.description}
                 image={movieous}
                 frameworks={[SiReact, SiJavascript]}
                 repo={data.movieous.repo}/>
+              <Card
+                name={data.zap.name}
+                description={data.zap.description}
+                image={zap}
+                frameworks={[SiReact, SiTypescript, SiNextdotjs]}
+                repo={data.zap.repo}/>
             </motion.ul>
           </div>
         </div>

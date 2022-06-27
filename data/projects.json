@@ -18,5 +18,10 @@
     "name": "movieous",
     "description": "works.movieous",
     "repo": "https://github.com/icabetong/movieous"
+  },
+  "zap": {
+    "name": "zap",
+    "description": "works.zap",
+    "repo": "https://github.com/icabetong/zap"
   }
 }
