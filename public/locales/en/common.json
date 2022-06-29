@@ -23,7 +23,8 @@
     "reactjs": "ReactJS",
     "nextjs": "NextJS",
     "expressjs": "ExpressJS",
-    "vuejs": "Vue"
+    "vuejs": "Vue",
+    "svelte": "Svelte"
   },
   "contact": {
     "header": "Get in Touch",

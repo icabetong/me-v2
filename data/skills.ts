@@ -11,10 +11,11 @@ import {
   SiReact,
   SiNextdotjs,
   SiExpress,
-  SiVuedotjs
+  SiVuedotjs,
+  SiSvelte
 } from "react-icons/si";
 
-export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs" | "nextjs" | "expressjs" | "vuejs"
+export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs" | "nextjs" | "expressjs" | "vuejs" | "svelte"
 
 export const skills: Skill[] = [
   "android",
@@ -29,7 +30,8 @@ export const skills: Skill[] = [
   "reactjs",
   "nextjs",
   "expressjs",
-  "vuejs"
+  "vuejs",
+  "svelte"
 ]
 
 export function getIcon(skill: Skill) {
@@ -60,5 +62,7 @@ export function getIcon(skill: Skill) {
       return SiExpress
     case "vuejs":
       return SiVuedotjs
+    case "svelte":
+      return SiSvelte
   }
 }
