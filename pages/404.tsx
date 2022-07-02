@@ -19,11 +19,9 @@ const NotFound: NextPage = () => {
           <h2 className="text-2xl md:text-3xl font-semibold mb-2">{t("header")}</h2>
           <h3 className="text-md md:text-lg text-gray-400">{t("summary")}</h3>
 
-          <motion.div 
-            whileHover={{ scale: 1.1 }} 
-            className="my-8 h-fit">
+          <motion.div whileHover={{ scale: 1.1 }} className="my-8 h-fit">
             <Link href="/">
-              <a className="bg-navajo-white text-russian font-medium px-4 md:px-8 py-2 rounded-full">{t("back-to-home")}</a>
+              <a className="bg-navajo-white text-russian font-medium px-4 md:px-8 py-2 cursor-pointer rounded-full">{t("back-to-home")}</a>
             </Link>
           </motion.div>
         </div>
