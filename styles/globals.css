@@ -19,3 +19,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .icon-button {
+    @apply p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian;
+  }
+  .button {
+    @apply px-4 py-2 bg-navajo-white text-content-900 rounded-full font-inter font-medium flex flex-row items-center justify-center space-x-2;
+  }
+  .input {
+    @apply w-full bg-content-800 rounded my-2 px-4 py-2 text-azureish-white appearance-none focus:outline-none focus:ring-2 focus:ring-navajo-white transition-all;
+  }
+}

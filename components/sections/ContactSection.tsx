@@ -54,7 +54,7 @@ const ContactSection = () => {
             {t("contact.summary")}
           </motion.p>
           <motion.a
-          variants={itemVariants}
+            variants={itemVariants}
             href={data.mail}
             target="_blank"
             whileHover={{ scale: 1.1 }}

@@ -20,22 +20,19 @@ const Home: NextPage = () => {
       <main className="relative bg-russian text-azureish-white min-h-screen mx-auto">
         <HeroSection/>
         <div className="absolute inset-0 h-fit">
-          <Navigation/>
+          <Navigation isAnimated/>
         </div>
         <AboutSection/>
         <SkillsSection/>
         <WorksSection/>
         <ContactSection/>
-        <Footer/>
       </main>
+      <Footer/>
     </>
   )
 }
 
-type HomeProps = {
-  locale: string
-}
-export const getStaticProps = async ({ locale }: HomeProps) => ({
+export const getStaticProps = async ({ locale }: PageProps) => ({
   props: {
     ...await serverSideTranslations(locale, ['common'])
   }

@@ -17,9 +17,12 @@ module.exports = {
         "aquamarine": "#69F0AE",
         "cornfields": "#FFF9B8",
         "azureish-white": "#DBEDF3",
-        "navajo-white": "#ACDBFF",
-        "content": "#17171F",
-        "footer": "#060609"
+        "navajo-white": "#acdbff",
+        "content": {
+          "900": "#17171f",
+          "800": "#373740"
+        },
+        "footer": "#060609",
       },
     }
   },

@@ -1,14 +1,12 @@
-import { useState } from "react"
+import { useState, FC } from "react"
 import { motion } from "framer-motion"
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"
 
-import { Route } from "./Route"
 import NavigationLink from "./NavigationLink"
 import Box from "../core/Box"
 import data from "../../data/data.json"
 
-const routes: Route[] = ["about", "skills", "works", "contact"]
-const Navigation = () => {
+const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
   const [open, setOpen] = useState(false)
   const onHandleMenu = () => setOpen((prev) => !prev)
 
@@ -26,11 +24,14 @@ const Navigation = () => {
 
   const list = (
     <motion.ul
-      variants={navigationContainer}
-      initial="hidden"
+      variants={ navigationContainer }
+      initial={isAnimated ? "hidden" : "visible"}
       animate="visible" 
       className="flex flex-col px-2 py-2 md:flex-row md:space-x-8 md:text-md md:font-medium">
-      { routes.map((route) => <NavigationLink key={route} route={route}/>) }
+      <NavigationLink key="about" route="about" type="section"/>
+      <NavigationLink key="skills" route="skills" type="section"/>
+      <NavigationLink key="works" route="works" type="section"/>
+      <NavigationLink key="contact" route="contact" type="page"/>
     </motion.ul>
   )
 
@@ -39,9 +40,9 @@ const Navigation = () => {
       <Box>
         <div className="container flex flex-wrap justify-between items-center py-4">
           <motion.a 
-            href="#"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            href="/"
+            initial={ isAnimated && { x: -200, opacity: 0 }}
+            animate={ isAnimated && { x: 0, opacity: 1 }}
             transition={{ delay: 2 }}
             className="flex items-center font-semibold text-xl">
             {data.domain}
@@ -74,7 +75,7 @@ const Navigation = () => {
         </div>
         <motion.div
           animate={{ scale: open ? 1 : 0 }}
-          className={`${open ? 'block' : 'hidden'} bg-content w-full md:hidden md:w-auto rounded`} id="nav-menu">
+          className={`${open ? 'block' : 'hidden'} bg-content-900 w-full md:hidden md:w-auto rounded`} id="nav-menu">
           {list}
         </motion.div>
       </Box>

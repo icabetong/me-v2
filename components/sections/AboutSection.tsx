@@ -26,7 +26,7 @@ const AboutSection = () => {
 
   const intro = t("about.intro")
   return (
-    <section id="about" className="bg-content relative">
+    <section id="about" className="bg-content-900 relative">
       <Box className="py-32">
         <div ref={ref} className="flex flex-col items-center justify-center">
           <motion.h2

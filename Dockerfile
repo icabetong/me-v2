@@ -23,4 +23,4 @@ RUN yarn build
 
 # Expose a port and run a development version
 EXPOSE 3000
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "dev" ]

@@ -1,1 +1,0 @@
-export type Route = "home" | "about" | "skills" | "works" | "contact"

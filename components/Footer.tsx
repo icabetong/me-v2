@@ -20,7 +20,7 @@ const Footer = () => {
   }, [control, isInView])
 
   return (
-    <footer ref={ref} className="bg-footer relative min-h-md py-8">
+    <footer ref={ref} className="bg-footer text-azureish-white relative min-h-md py-8">
       <Box className="flex flex-col items-center justify-center">
         <motion.div
           initial="hidden"
@@ -43,7 +43,7 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            className="icon-button"
             aria-label="GitHub">
             <FiGithub/>
           </motion.a>
@@ -52,7 +52,7 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            className="icon-button"
             aria-label="LinkedIn">
             <FiLinkedin/>
           </motion.a>
@@ -61,7 +61,7 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            className="icon-button"
             aria-label="Email">
             <FiMail/>
           </motion.a>
@@ -70,7 +70,7 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            className="icon-button"
             aria-label="Twitter">
             <FiTwitter/>
           </motion.a>
@@ -79,7 +79,7 @@ const Footer = () => {
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-            className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
+            className="icon-button"
             aria-label="Instagram">
             <FiInstagram/>
           </motion.a>

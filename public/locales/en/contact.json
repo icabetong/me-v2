@@ -1,0 +1,22 @@
+{
+  "title": "Contact | icabetong",
+  "header": "Got a project for me?",
+  "summary": "Let's create something together",
+  "desc": "Feel free to get in touch with me, I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+  "form-title": "Send me a message",
+  "field": {
+    "name": "Full name",
+    "email": "Email address",
+    "subject": "Subject",
+    "more": "Tell us more about the project"
+  },
+  "button": {
+    "send": "Send"
+  },
+  "feedback": {
+    "name-empty": "Name should not be empty",
+    "email-empty": "Email address should not be empty",
+    "subject-empty": "Subject should not be empty",
+    "body-empty": "Message body should not be empty"
+  }
+}

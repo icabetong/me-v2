@@ -64,7 +64,7 @@ const WorksSection = () => {
   }
 
   return (
-    <section id="works" className="bg-content relative">
+    <section id="works" className="bg-content-900 relative">
       <Box className="py-32">
         <div ref={headingRef} className="mx-14 md:mx-24">
           <motion.h2

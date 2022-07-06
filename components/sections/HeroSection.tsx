@@ -1,21 +1,14 @@
 import { useTranslation } from "next-i18next"
-import Particles from "react-tsparticles"
-import { loadSlim } from "tsparticles-slim"
-import { Engine } from "tsparticles-engine"
 import { motion } from "framer-motion"
 import { HiOutlineDownload } from "react-icons/hi"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 
 import Box from "../core/Box"
-import particlesConfig from "../../shared/particles/config"
 import data from "../../data/data.json"
+import ParticlesContainer from "../core/ParticlesContainer"
 
 const HeroSection = () => {
   const { t } = useTranslation()
-
-  const onParticlesStart = async (engine: Engine) => {
-    loadSlim(engine)
-  }
 
   const item = {
     visible: { opacity: 1, x: 0 },
@@ -24,12 +17,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative">
-      <Particles
-        id="hero-background"
-        init={onParticlesStart} 
-        options={particlesConfig as any}
-        className="h-full object-cover absolute w-full"
-        canvasClassName="will-change-auto h-full"/>
+      <ParticlesContainer/>
       <Box className="relative">
         <div className="py-40 md:py-60">
           <motion.div
@@ -81,7 +69,7 @@ const HeroSection = () => {
                 aria-label="GitHub"
                 whileHover={{ scale: 1.4 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-                className="p-2 text-lg rounded-lg hover:bg-navajo-white hover:text-russian">
+                className="icon-button">
                 <FiGithub/>
               </motion.a>
               <motion.a
@@ -92,7 +80,7 @@ const HeroSection = () => {
                 href={data.linkedin}
                 whileHover={{ scale: 1.4 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-                className="p-2 text-lg rounded-lg hover:bg-navajo-white hover:text-russian">
+                className="icon-button">
                 <FiLinkedin/>
               </motion.a>
               <span className="text-gray-500 font-medium">{t("misc.or")}</span>
@@ -103,7 +91,7 @@ const HeroSection = () => {
                 href={data.resume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
-                className="w-fit mx-2 px-4 py-2 rounded-full bg-navajo-white text-russian flex flex-row items-center justify-center cursor-pointer">
+                className="button">
                 <span className="mx-2 font-semibold font-inter text-center">
                   {t("button.download-resume")}
                 </span>

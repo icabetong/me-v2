@@ -1,0 +1,19 @@
+import Particles from "react-tsparticles"
+import { loadSlim } from "tsparticles-slim"
+import { Engine } from "tsparticles-engine"
+import particlesConfig from "../../shared/particles/config"
+
+const ParticlesContainer = () => {
+  const onParticlesStart = async (engine: Engine) => loadSlim(engine)
+
+  return (
+    <Particles
+      id="hero-background"
+      init={onParticlesStart} 
+      options={particlesConfig as any}
+      className="h-full object-cover absolute w-full"
+      canvasClassName="will-change-auto h-full"/>
+  )
+}
+
+export default ParticlesContainer
