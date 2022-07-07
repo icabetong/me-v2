@@ -10,11 +10,11 @@ import Box from "../core/Box"
 
 import data from "../../data/projects.json"
 
-import fokus from "../../public/images/fokus.webp"
-import coind from "../../public/images/coind.webp"
-import movieous from "../../public/images/movieous.webp"
-import openauth from "../../public/images/openauth.webp"
-import zap from "../../public/images/zap.webp"
+import fokus from "../../public/images/fokus.jpg"
+import coind from "../../public/images/coind.jpg"
+import movieous from "../../public/images/movieous.jpg"
+import openauth from "../../public/images/openauth.jpg"
+import zap from "../../public/images/zap.jpg"
 
 const WorksSection = () => {
   const { t } = useTranslation()
