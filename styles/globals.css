@@ -21,6 +21,9 @@ a {
 }
 
 @layer components {
+  .error {
+    @apply w-full px-3 text-red-500 text-sm font-medium;
+  }
   .icon-button {
     @apply p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian;
   }

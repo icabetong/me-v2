@@ -39,40 +39,86 @@ const ContactPage: NextPage = () => {
             <p className="text-md font-inter my-4">{t("desc")}</p>
           </div>
           <div className="flex flex-col justify-center flex-1 h-full">
-            {
-              <span>{}</span>
-            }
-            <form 
+            <motion.form 
+              layout
               onSubmit={handleSubmit(onHandleSubmit)} 
               className="font-inter w-full flex flex-col items-center justify-center">
               <input 
-                className="input" 
+                className={'input '.concat(errors.name ? 'ring-2 ring-red-500' : '')} 
                 type="text" 
                 placeholder={t("field.name")}
-                {...register("name", { required: "feedback.name-required" })}/>
-              <input 
-                className="input" 
+                {...register("name", { required: true })}/>
+              <motion.div
+                layout
+                layoutId="name-error"
+                className="error"
+                animate={
+                  errors.name
+                  ? { display: 'block', opacity: 1 }
+                  : { display: 'none', opacity: 0 }
+                }>
+                {t("feedback.name-empty")}
+              </motion.div>
+              <motion.input 
+                layout
+                className={'input '.concat(errors.email ? 'ring-2 ring-red-500' : '')}
                 type="email" 
                 placeholder={t("field.email")}
                 {...register("email", { required: "feedback.email-required" })}/>
-              <input 
-                className="input" 
+              <motion.div
+                layout
+                layoutId="email-error"
+                className="error"
+                animate={
+                  errors.email
+                  ? { display: 'block', opacity: 1 }
+                  : { display: 'none', opacity: 0 }
+                }>
+                {t("feedback.email-empty")}
+              </motion.div>
+              <motion.input 
+                layout
+                className={'input '.concat(errors.subject ? 'ring-2 ring-red-500' : '')} 
                 type="text" 
                 placeholder={t("field.subject")}
                 {...register("subject", { required: "feedback.subject-required" })}/>
-              <textarea 
-                className="input" 
+              <motion.div
+                layout
+                layoutId="subject-error"
+                className="error"
+                animate={
+                  errors.subject
+                  ? { display: 'block', opacity: 1 }
+                  : { display: 'none', opacity: 0 }
+                }>
+                {t("feedback.subject-empty")}
+              </motion.div>
+              <motion.textarea 
+                layout
+                className={'input '.concat(errors.body ? 'ring-2 ring-red-500' : '')}
                 rows={8} 
                 placeholder={t("field.more")}
                 {...register("body", { required: "feedback.body-required" })}/>
+              <motion.div
+                layout
+                layoutId="body-error"
+                className="error"
+                animate={
+                  errors.body
+                  ? { display: 'block', opacity: 1 }
+                  : { display: 'none', opacity: 0 }
+                }>
+                {t("feedback.body-empty")}
+              </motion.div>
               <motion.button 
+                layout
                 whileHover={{ scale: 1.1 }}
                 type="submit" 
                 className="button px-16 mt-4">
                 <HiPaperAirplane className="w-4 h-4"/>
                 <span className="font-medium">{t("button.send")}</span>
               </motion.button>
-            </form>
+            </motion.form>
           </div>
         </Box>
       </main>
