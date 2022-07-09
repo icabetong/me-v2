@@ -18,8 +18,8 @@ const Navigation = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 2.8,
-        staggerChildren: 0.2
+        delayChildren: 1.6,
+        staggerChildren: 0.1
       }
     }
   }
@@ -42,7 +42,7 @@ const Navigation = () => {
             href="#"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 1.4 }}
             className="flex items-center font-semibold text-xl">
             {data.domain}
           </motion.a>

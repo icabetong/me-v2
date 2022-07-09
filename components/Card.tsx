@@ -11,9 +11,11 @@ type CardProps = {
   repo: string,
   frameworks: IconType[],
   image: StaticImageData,
+  width?: string,
+  height?: string,
 }
 
-const Card = (props: CardProps) => {
+const Card: React.FC<CardProps> = ({ name, description, repo, frameworks, image, width, height }) => {
   const { t } = useTranslation()
 
   const linkVariants = {
@@ -77,28 +79,30 @@ const Card = (props: CardProps) => {
       <div className="h-76 overflow-hidden">
         <Image 
           priority
-          src={props.image}
-          alt={t("alt.screenshot", { name: props.name })}/>
+          src={image}
+          width={width}
+          height={height}
+          alt={t("alt.screenshot", { name: name })}/>
       </div>
       <motion.div className="mt-2 mb-4 font-firacode font-semibold text-xl text-navajo-white flex flex-row items-center justify-center">
         <motion.div
           variants={nameVariants}>
-          {props.name}
+          {name}
         </motion.div>
         <motion.div
           variants={linkVariants}
           whileHover={{ scale: 1.1 }}
           className="grid grid-cols-2 gap-3">
           {
-            props.frameworks.map((icon) => React.createElement(icon, { key: icon.toString() }))
+            frameworks.map((icon) => React.createElement(icon, { key: icon.toString() }))
           }
         </motion.div>
       </motion.div>
       <p className="max-w-xs px-2 text-center font-inter">
-        {t(props.description)}
+        {t(description)}
       </p>
       <motion.a
-        href={props.repo}
+        href={repo}
         target="_blank"
         variants={buttonVariants}
         whileHover={{ scale: 1.1 }}

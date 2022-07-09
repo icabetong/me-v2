@@ -40,7 +40,7 @@ const HeroSection = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 0.8,
+                  delayChildren: 0.4,
                   staggerChildren: 0.2
                 }
               }}}>
@@ -64,14 +64,14 @@ const HeroSection = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.8 }}
+              transition={{ delay: 1.2 }}
               className="mt-10 text-lg text-azureish-white font-inter max-w-sm lg:max-w-md">
               {t("hero.summary")}
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2 }}
+              transition={{ delay: 1.4 }}
               className="flex flex-row items-center justify-start space-x-4 mt-8">
               <motion.a
                 target="_blank"

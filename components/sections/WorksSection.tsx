@@ -24,13 +24,20 @@ const WorksSection = () => {
     triggerOnce: true
   })
   const [sectionRef, sectionIsInView] = useInView({
-    triggerOnce: true
+    triggerOnce: true,
+    root: null,
+    threshold: 0.2
   })
 
   useEffect(() => {
     if (headingIsInView) 
       headingAnim.start('visible')
   }, [headingIsInView, headingAnim])
+
+  useEffect(() => {
+    if (sectionIsInView)
+      sectionAnim.start('visible')
+  }, [sectionIsInView, sectionAnim])
 
   const variants = {
     hidden: { y: 20, opacity: 0 },
@@ -57,7 +64,11 @@ const WorksSection = () => {
             className="font-semibold font-inter text-3xl text-azureish-white">
               {t("section.works")}
           </motion.h2>
-          <div className="flex flex-col items-center justify-center mt-8">
+          <motion.div 
+            initial="hidden"
+            animate={sectionAnim}
+            variants={variants}
+            className="flex flex-col items-center justify-center mt-8">
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card
                 name={data.fokus.name}
@@ -93,7 +104,7 @@ const WorksSection = () => {
                 frameworks={[SiReact, SiTypescript, SiNextdotjs]}
                 repo={data.zap.repo}/>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </Box>
     </section>
