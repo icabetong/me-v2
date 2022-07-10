@@ -32,12 +32,9 @@ const Home: NextPage = () => {
   )
 }
 
-type HomeProps = {
-  locale: string
-}
-export const getStaticProps = async ({ locale }: HomeProps) => ({
+export const getStaticProps = async ({ locale }: PageProps) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common'])
+    ...(await serverSideTranslations(locale, ['common']))
   }
 })
 

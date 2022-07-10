@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config')
 const withPWA = require('next-pwa')
+const withPlugins = require('next-compose-plugins')
 
 const nextConfig = {
   i18n,
@@ -11,22 +12,35 @@ const nextConfig = {
   }
 }
 
-module.exports = withPWA({
-  ...nextConfig,
+const pwaConfig = {
   pwa: {
     dest: "public",
     register: true,
     skipWaiting: true
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        'react': 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      })
-    }
-
-    return config
   }
-})
+}
+
+// module.exports = withPWA({
+//   ...nextConfig,
+//   pwa: {
+//     dest: "public",
+//     register: true,
+//     skipWaiting: true
+//   },
+//   webpack: (config, { dev, isServer }) => {
+//     if (!dev && !isServer) {
+//       Object.assign(config.resolve.alias, {
+//         'react': 'preact/compat',
+//         'react-dom/test-utils': 'preact/test-utils',
+//         'react-dom': 'preact/compat',
+//       })
+//     }
+//     return config
+//   }
+// })
+
+
+module.exports = withPlugins(
+  [[withPWA, pwaConfig]], 
+  nextConfig
+)

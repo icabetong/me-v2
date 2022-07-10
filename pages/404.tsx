@@ -30,12 +30,9 @@ const NotFound: NextPage = () => {
   )
 }
 
-type NotFoundProps = {
-  locale: string
-}
-export const getStaticProps = async ({ locale }: NotFoundProps) => ({
+export const getStaticProps = async ({ locale }: PageProps) => ({
   props: {
-    ...await serverSideTranslations(locale, ['404'])
+    ...(await serverSideTranslations(locale, ['404']))
   }
 })
 
