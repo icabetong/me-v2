@@ -77,7 +77,7 @@ const HeroSection = () => {
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={data.github}
                 aria-label="GitHub"
                 whileHover={{ scale: 1.4 }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 href={data.linkedin}
                 whileHover={{ scale: 1.4 }}
@@ -100,7 +100,7 @@ const HeroSection = () => {
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={data.resume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}

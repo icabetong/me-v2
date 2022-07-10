@@ -41,6 +41,7 @@ const Footer = () => {
           <motion.a
             href={data.github}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
             className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
@@ -50,6 +51,7 @@ const Footer = () => {
           <motion.a 
             href={data.linkedin}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
             className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
@@ -59,6 +61,7 @@ const Footer = () => {
           <motion.a 
             href={data.mail}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
             className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
@@ -68,6 +71,7 @@ const Footer = () => {
           <motion.a 
             href={data.twitter}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
             className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"
@@ -77,6 +81,7 @@ const Footer = () => {
           <motion.a 
             href={data.instagram}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}
             className="p-2 text-2xl rounded-md hover:bg-navajo-white hover:text-russian"

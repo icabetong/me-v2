@@ -102,6 +102,7 @@ const Card: React.FC<CardProps> = ({ name, description, repo, frameworks, image 
       <motion.a
         href={repo}
         target="_blank"
+        rel="noopener noreferrer"
         variants={buttonVariants}
         whileHover={{ scale: 1.1 }}
         className="flex flex-row items-center justify-center mt-4 px-4 py-2 bg-navajo-white text-russian font-inter font-semibold rounded-full cursor-pointer">

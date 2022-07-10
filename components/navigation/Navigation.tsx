@@ -39,7 +39,7 @@ const Navigation = () => {
       <Box>
         <div className="container flex flex-wrap justify-between items-center py-4">
           <motion.a 
-            href="#"
+            href="/"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1.4 }}
