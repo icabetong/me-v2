@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "6.4.3",
-    "next": "^12.1.6",
+    "next": "12.1.6",
     "next-i18next": "^11.0.0",
     "next-pwa": "^5.5.4",
     "preact": "10.9.0",
