@@ -33,8 +33,6 @@ export default function Document() {
         <meta name="twitter:title" content={data.site} />
         <meta name="twitter:description" content={data.desc} />
         <meta name="twitter:image" content={data.image} />
-
-        <link rel="preload" href="/images/me.png" as="image"/>
       </Head>
       <body>
         <Main/>
