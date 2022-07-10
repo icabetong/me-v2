@@ -75,19 +75,25 @@ const WorksSection = () => {
                 description={data.fokus.description}
                 image={fokus}
                 frameworks={[SiAndroid, SiKotlin]}
-                repo={data.fokus.repo}/>
+                repo={data.fokus.repo}
+                width="295"
+                height="524"/>
               <Card
                 name={data.coind.name}
                 description={data.coind.description}
                 image={coind}
                 frameworks={[SiFlutter, SiDart]}
-                repo={data.coind.repo}/>
+                repo={data.coind.repo}
+                width="295"
+                height="524"/>
               <Card
                 name={data.openauth.name}
                 description={data.openauth.description}
                 image={openauth}
                 frameworks={[SiFlutter, SiDart]}
-                repo={data.openauth.repo}/>
+                repo={data.openauth.repo}
+                width="295"
+                height="524"/>
             </ul>
             <div className="py-8"/>
             <ul className="grid grid-cols-1 gap-8">
@@ -96,13 +102,17 @@ const WorksSection = () => {
                 description={data.movieous.description}
                 image={movieous}
                 frameworks={[SiReact, SiJavascript]}
-                repo={data.movieous.repo}/>
+                repo={data.movieous.repo}
+                width="1214"
+                height="766"/>
               <Card
                 name={data.zap.name}
                 description={data.zap.description}
                 image={zap}
                 frameworks={[SiReact, SiTypescript, SiNextdotjs]}
-                repo={data.zap.repo}/>
+                repo={data.zap.repo}
+                width="1214"
+                height="650"/>
             </ul>
           </motion.div>
         </div>

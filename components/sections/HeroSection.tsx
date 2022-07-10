@@ -40,8 +40,8 @@ const HeroSection = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 0,
-                  staggerChildren: 0.1
+                  delayChildren: 0.4,
+                  staggerChildren: 0.2
                 }
               }}}>
             <div className="flex flex-col py-0 flex-grow space-y-2 md:space-y-4">
@@ -61,14 +61,13 @@ const HeroSection = () => {
                 {data.position}
               </motion.div>
             </div>
-            <motion.div
-              // Use non-zero opacity for LCP optimization
-              initial={{ opacity: 0.01 }}
+            <motion.p
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 1.2 }}
               className="mt-10 text-lg text-azureish-white font-inter max-w-sm lg:max-w-md">
               {t("hero.summary")}
-            </motion.div>
+            </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
