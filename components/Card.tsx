@@ -15,7 +15,7 @@ type CardProps = {
   height?: string,
 }
 
-const Card: React.FC<CardProps> = ({ name, description, repo, frameworks, image, width, height }) => {
+const Card: React.FC<CardProps> = ({ name, description, repo, frameworks, image }) => {
   const { t } = useTranslation()
 
   const linkVariants = {
@@ -80,8 +80,6 @@ const Card: React.FC<CardProps> = ({ name, description, repo, frameworks, image,
         <Image 
           priority
           src={image}
-          width={width}
-          height={height}
           alt={t("alt.screenshot", { name: name })}/>
       </div>
       <motion.div className="mt-2 mb-4 font-firacode font-semibold text-xl text-navajo-white flex flex-row items-center justify-center">
