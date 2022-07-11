@@ -28,8 +28,8 @@ const HeroSection = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 0.8,
-                  staggerChildren: 0.2
+                  delayChildren: 0,
+                  staggerChildren: 0.1
                 }
               }}}>
             <div className="flex flex-col py-0 flex-grow space-y-2 md:space-y-4">
@@ -49,22 +49,23 @@ const HeroSection = () => {
                 {data.position}
               </motion.div>
             </div>
-            <motion.p
-              initial={{ opacity: 0 }}
+            <motion.div
+              // Use non-zero opacity for LCP optimization
+              initial={{ opacity: 0.01 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.8 }}
+              transition={{ delay: 0.6 }}
               className="mt-10 text-lg text-azureish-white font-inter max-w-sm lg:max-w-md">
               {t("hero.summary")}
-            </motion.p>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2 }}
+              transition={{ delay: 1.4 }}
               className="flex flex-row items-center justify-start space-x-4 mt-8">
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={data.github}
                 aria-label="GitHub"
                 whileHover={{ scale: 1.4 }}
@@ -75,7 +76,7 @@ const HeroSection = () => {
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 href={data.linkedin}
                 whileHover={{ scale: 1.4 }}
@@ -87,7 +88,7 @@ const HeroSection = () => {
               <motion.a
                 target="_blank"
                 role="link"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={data.resume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9, x: "-2px", y: "2px" }}

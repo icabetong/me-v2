@@ -7,7 +7,6 @@ import { SiAndroid, SiKotlin, SiFlutter, SiReact, SiJavascript, SiDart, SiTypesc
 
 import Card from "../Card"
 import Box from "../core/Box"
-import useBreakpoint from "../../shared/hooks/useBreakpoint"
 
 import data from "../../data/projects.json"
 
@@ -20,45 +19,36 @@ import zap from "../../public/images/zap.webp"
 const WorksSection = () => {
   const { t } = useTranslation()
   const headingAnim = useAnimation()
-  const mobileAnim = useAnimation()
-  const webAnim = useAnimation()
-  const smBreakpoint = useBreakpoint('sm')
+  const sectionAnim = useAnimation()
   const [headingRef, headingIsInView] = useInView({
+    triggerOnce: true
+  })
+  const [sectionRef, sectionIsInView] = useInView({
     triggerOnce: true,
     root: null,
-    threshold: 0.3
-  })
-  const [mobileRef, mobileIsInView] = useInView({
-    triggerOnce: true,
-    threshold: smBreakpoint ? 0.4 : undefined
-  })
-  const [webRef, webIsInView] = useInView({
-    triggerOnce: true,
-    threshold: smBreakpoint ? 0.4 : 0.02
+    threshold: 0.2
   })
 
   useEffect(() => {
-    if (headingIsInView) {
+    if (headingIsInView) 
       headingAnim.start('visible')
-    }
   }, [headingIsInView, headingAnim])
 
   useEffect(() => {
-    if (mobileIsInView) mobileAnim.start('visible')
-  }, [mobileIsInView, mobileAnim])
+    if (sectionIsInView)
+      sectionAnim.start('visible')
+  }, [sectionIsInView, sectionAnim])
 
-  useEffect(() => {
-    if (webIsInView) webAnim.start('visible')
-  }, [webIsInView, webAnim])
-
-  const listVariants = {
-    hidden: { opacity: 1, scale: 0 },
+  const variants = {
+    hidden: { y: 20, opacity: 0 },
     visible: {
+      y: 0,
       opacity: 1,
-      scale: 1,
       transition: {
-        delayChildren: 1,
-        staggerChildren: 0.2
+        delay: 0.4,
+        type: "spring",
+        bounce: 0.6,
+        duration: 0.8
       }
     }
   }
@@ -70,29 +60,16 @@ const WorksSection = () => {
           <motion.h2
             initial="hidden"
             animate={headingAnim}
-            variants={{
-              hidden: { y: 20, opacity: 0 },
-              visible: {
-                y: 0,
-                opacity: 1,
-                transition: {
-                  delay: 0.4,
-                  type: "spring",
-                  bounce: 0.6,
-                  duration: 0.8
-                }
-              }
-            }} 
+            variants={variants} 
             className="font-semibold font-inter text-3xl text-azureish-white">
               {t("section.works")}
           </motion.h2>
-          <div className="flex flex-col items-center justify-center mt-8">
-            <motion.ul
-              ref={mobileRef}
-              initial="hidden"
-              animate={mobileAnim}
-              variants={listVariants}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            initial="hidden"
+            animate={sectionAnim}
+            variants={variants}
+            className="flex flex-col items-center justify-center mt-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card
                 name={data.fokus.name}
                 description={data.fokus.description}
@@ -111,14 +88,9 @@ const WorksSection = () => {
                 image={openauth}
                 frameworks={[SiFlutter, SiDart]}
                 repo={data.openauth.repo}/>
-            </motion.ul>
+            </ul>
             <div className="py-8"/>
-            <motion.ul
-              ref={webRef}
-              initial="hidden"
-              animate={webAnim}
-              variants={listVariants}
-              className="grid grid-cols-1 gap-8">
+            <ul className="grid grid-cols-1 gap-8">
               <Card
                 name={data.movieous.name}
                 description={data.movieous.description}
@@ -131,8 +103,8 @@ const WorksSection = () => {
                 image={zap}
                 frameworks={[SiReact, SiTypescript, SiNextdotjs]}
                 repo={data.zap.repo}/>
-            </motion.ul>
-          </div>
+            </ul>
+          </motion.div>
         </div>
       </Box>
     </section>

@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "typeRoots": [
-      "./shared/types/"
+      "./shared/types/*"
     ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

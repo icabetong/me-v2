@@ -57,6 +57,7 @@ const ContactSection = () => {
             variants={itemVariants}
             href={data.mail}
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: '-2px', y: '2px' }}
             className="mt-8 py-4 px-20 bg-navajo-white text-russian text-lg font-inter font-semibold rounded-full">

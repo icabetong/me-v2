@@ -16,8 +16,8 @@ const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 2.8,
-        staggerChildren: 0.2
+        delayChildren: 1.6,
+        staggerChildren: 0.1
       }
     }
   }
