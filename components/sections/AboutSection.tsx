@@ -63,7 +63,7 @@ const AboutSection = () => {
                     }
                   }
                 }}
-                className="max-w-sm mt-8 text-3xl text-aquamarine font-firacode mb-8 text-center lg:mt-0 lg:text-start md:text-4xl">
+                className="max-w-sm mt-8 text-3xl text-navajo-white font-firacode mb-8 text-center lg:mt-0 lg:text-start md:text-4xl">
                 {data.fullName}
               </motion.div>
               { 
