@@ -9,7 +9,21 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ['image/webp']
-  }
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Note, preact is only enabled for production builds (`next build`)
+    if (!dev && !isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "react/jsx-runtime.js": "preact/compat/jsx-runtime",
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+      };
+    }
+
+    return config;
+  },
 }
 
 const pwaConfig = {
@@ -19,26 +33,6 @@ const pwaConfig = {
     skipWaiting: true
   }
 }
-
-// module.exports = withPWA({
-//   ...nextConfig,
-//   pwa: {
-//     dest: "public",
-//     register: true,
-//     skipWaiting: true
-//   },
-//   webpack: (config, { dev, isServer }) => {
-//     if (!dev && !isServer) {
-//       Object.assign(config.resolve.alias, {
-//         'react': 'preact/compat',
-//         'react-dom/test-utils': 'preact/test-utils',
-//         'react-dom': 'preact/compat',
-//       })
-//     }
-//     return config
-//   }
-// })
-
 
 module.exports = withPlugins(
   [[withPWA, pwaConfig]], 
