@@ -1,13 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+const HeroSection = dynamic(() => import('../components/sections/HeroSection'))
+const AboutSection = dynamic(() => import('../components/sections/AboutSection'))
+const SkillsSection = dynamic(() => import('../components/sections/SkillsSection'))
+const WorksSection = dynamic(() => import('../components/sections/WorksSection'))
+const ContactSection = dynamic(() => import('../components/sections/ContactSection'))
+
 import Navigation from '../components/navigation/Navigation'
-import HeroSection from '../components/sections/HeroSection'
-import AboutSection from '../components/sections/AboutSection'
-import SkillsSection from '../components/sections/SkillsSection'
-import WorksSection from '../components/sections/WorksSection'
-import ContactSection from '../components/sections/ContactSection'
 import Footer from '../components/Footer'
 import data from '../data/data.json'
 
