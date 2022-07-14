@@ -14,9 +14,6 @@
     "send": "Send"
   },
   "feedback": {
-    "name-empty": "Name should not be empty",
-    "email-empty": "Email address should not be empty",
-    "subject-empty": "Subject should not be empty",
-    "body-empty": "Message body should not be empty"
+    "success": "Success!"
   }
 }
