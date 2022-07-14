@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { motion } from 'framer-motion'
@@ -19,7 +20,11 @@ const NotFound: NextPage = () => {
           <h3 className="text-md md:text-lg text-gray-400">{t("summary")}</h3>
 
           <motion.div whileHover={{ scale: 1.1 }} className="my-8 h-fit">
-            <a href="/" className="bg-navajo-white text-russian font-medium px-4 md:px-8 py-2 cursor-pointer rounded-full">{t("back-to-home")}</a>
+            <Link href="/">
+              <a className="bg-navajo-white text-russian font-medium px-4 md:px-8 py-2 cursor-pointer rounded-full">
+                {t("back-to-home")}
+              </a>
+            </Link>
           </motion.div>
         </div>
       </div>
