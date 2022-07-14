@@ -34,8 +34,10 @@ const ContactPage: NextPage = () => {
           <div className="flex flex-col justify-center flex-1 h-full">
             <motion.form
               layout
+              name="contact"
               action="/contact?success=true"
               data-netlify="true"
+              method="POST"
               className="font-inter w-full flex flex-col items-center justify-center">
               <input
                 required
