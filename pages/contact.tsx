@@ -26,6 +26,7 @@ const ContactPage: NextPage = () => {
           </div>
           <div className="flex flex-col justify-center flex-1 h-full">
             <form
+              action="/success"
               name="contact"
               data-netlify="true"
               method="POST"
