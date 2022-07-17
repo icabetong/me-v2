@@ -1,22 +1,15 @@
-import { useState, useEffect, FormEvent } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { HiPaperAirplane } from 'react-icons/hi'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Box from '../components/core/Box'
 import Navigation from '../components/navigation/Navigation'
 import Footer from '../components/Footer'
 
 const ContactPage: NextPage = () => {
   const { t } = useTranslation('contact')
-  const [success, setSuccess] = useState(false)
-
-  useEffect(() => {
-    if (window.location.search.includes('success=true'))
-      setSuccess(true)
-  }, [])
 
   return (
     <>
@@ -32,52 +25,47 @@ const ContactPage: NextPage = () => {
             <p className="text-md font-inter my-4">{t("desc")}</p>
           </div>
           <div className="flex flex-col justify-center flex-1 h-full">
-            <motion.form
-              layout
+            <form
               name="contact"
-              action="/contact?success=true"
               data-netlify="true"
               method="POST"
               className="font-inter w-full flex flex-col items-center justify-center">
+              <input type="hidden" name="form-name" value="contact"/>
+              <label htmlFor="name" className="hidden">{t("field.name")}</label>
               <input
                 required
                 className="input"
                 type="text" 
                 placeholder={t("field.name")}
+                id="name"
                 name="name"
                 aria-required="true"/>
+              <label htmlFor="email" className="hidden">{t("field.email")}</label>
               <input 
                 required
                 className="input"
                 type="email" 
                 name="email"
+                id="email"
                 placeholder={t("field.email")}
                 aria-required="true"/>
+              <label htmlFor="subject" className="hidden">{t("field.subject")}</label>
               <input 
                 required
                 className="input"
                 type="text" 
                 name="subject"
+                id="subject"
                 placeholder={t("field.subject")}
                 aria-required="true"/>
+              <label htmlFor="body" className="hidden">{t("field.more")}</label>
               <textarea 
                 className="input"
                 rows={8} 
                 name="body"
+                id="body"
                 placeholder={t("field.more")}
                 aria-required="true"/>
-              <AnimatePresence>
-                {
-                  success &&
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="w-full text-aquamarine">
-                    {t("feedback.success")}
-                  </motion.div>
-                }
-              </AnimatePresence>
               <motion.button 
                 whileHover={{ scale: 1.1 }}
                 type="submit" 
@@ -85,7 +73,7 @@ const ContactPage: NextPage = () => {
                 <HiPaperAirplane className="w-4 h-4"/>
                 <span className="font-medium">{t("button.send")}</span>
               </motion.button>
-            </motion.form>
+            </form>
           </div>
         </Box>
       </main>
