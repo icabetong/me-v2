@@ -15,7 +15,6 @@ module.exports = {
       colors: {
         "russian": "#0E0E14",
         "aquamarine": "#69F0AE",
-        "aqua": "#007d2b",
         "cornfields": "#FFF9B8",
         "azureish-white": "#DBEDF3",
         "navajo-white": "#acdbff",
@@ -29,4 +28,3 @@ module.exports = {
   },
   plugins: [],
 }
-//"footer": "#282836",

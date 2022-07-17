@@ -84,7 +84,7 @@ const ContactPage: NextPage = () => {
 
 export const getStaticProps = async ({ locale }: PageProps) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common', 'contact'])
+    ...(await serverSideTranslations(locale, ['common', 'contact']))
   }
 })
 
