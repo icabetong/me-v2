@@ -4,10 +4,18 @@ import dynamic from 'next/dynamic'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const HeroSection = dynamic(() => import('../components/sections/HeroSection'))
-const AboutSection = dynamic(() => import('../components/sections/AboutSection'))
-const SkillsSection = dynamic(() => import('../components/sections/SkillsSection'))
-const WorksSection = dynamic(() => import('../components/sections/WorksSection'))
-const ContactSection = dynamic(() => import('../components/sections/ContactSection'))
+const AboutSection = dynamic(
+  () => import('../components/sections/AboutSection')
+)
+const SkillsSection = dynamic(
+  () => import('../components/sections/SkillsSection')
+)
+const WorksSection = dynamic(
+  () => import('../components/sections/WorksSection')
+)
+const ContactSection = dynamic(
+  () => import('../components/sections/ContactSection')
+)
 
 import Navigation from '../components/navigation/Navigation'
 import Footer from '../components/Footer'
@@ -20,24 +28,24 @@ const Home: NextPage = () => {
         <title>{data.site}</title>
       </Head>
       <main className="relative bg-russian text-azureish-white min-h-screen mx-auto">
-        <HeroSection/>
+        <HeroSection />
         <div className="absolute inset-0 h-fit">
-          <Navigation isAnimated/>
+          <Navigation isAnimated />
         </div>
-        <AboutSection/>
-        <SkillsSection/>
-        <WorksSection/>
-        <ContactSection/>
+        <AboutSection />
+        <SkillsSection />
+        <WorksSection />
+        <ContactSection />
       </main>
-      <Footer/>
+      <Footer />
     </>
   )
 }
 
 export const getStaticProps = async ({ locale }: PageProps) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common']))
-  }
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
 })
 
 export default Home

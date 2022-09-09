@@ -8,19 +8,16 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    formats: ['image/webp']
-  }
+    formats: ['image/webp'],
+  },
 }
 
 const pwaConfig = {
   pwa: {
-    dest: "public",
+    dest: 'public',
     register: true,
-    skipWaiting: true
-  }
+    skipWaiting: true,
+  },
 }
 
-module.exports = withPlugins(
-  [[withPWA, pwaConfig]], 
-  nextConfig
-)
+module.exports = withPlugins([[withPWA, pwaConfig]], nextConfig)

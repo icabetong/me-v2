@@ -5,11 +5,11 @@ declare global {
   type NavigationProps = {
     isAnimated?: boolean
   }
-  type Route = "home" | "about" | "skills" | "works" | "contact"
+  type Route = 'home' | 'about' | 'skills' | 'works' | 'contact'
   type ContactForm = {
-    name: string,
-    email: string,
-    subject: string,
+    name: string
+    email: string
+    subject: string
     body: string
   }
 }
