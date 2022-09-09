@@ -10,5 +10,8 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {}
+  "rules": {},
+  "env": {
+    "jest": true
+  }
 }

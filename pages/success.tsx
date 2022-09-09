@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { motion } from 'framer-motion'
-import Navigation from '../components/navigation/Navigation'
-import Footer from '../components/Footer'
+import Navigation from '../components/navigation/navigation-item/Navigation'
+import Footer from '../components/sections/footer/Footer'
 import Link from 'next/link'
 
 const Success: NextPage = () => {

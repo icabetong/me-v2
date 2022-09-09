@@ -1,29 +1,29 @@
-import { useEffect } from 'react'
-import { useTranslation } from 'next-i18next'
-import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
+import { useTranslation } from 'next-i18next'
+import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 import {
   SiAndroid,
-  SiKotlin,
-  SiFlutter,
-  SiReact,
-  SiJavascript,
   SiDart,
-  SiTypescript,
+  SiFlutter,
+  SiJavascript,
+  SiKotlin,
   SiNextdotjs,
+  SiReact,
+  SiTypescript,
 } from 'react-icons/si'
 
-import Card from '../Card'
-import Box from '../core/Box'
+import Box from '../../core/box/Box'
+import Card from '../../core/card/Card'
 
-import data from '../../data/projects.json'
+import data from '../../../data/projects.json'
 
-import fokus from '../../public/images/fokus.webp'
-import coind from '../../public/images/coind.webp'
-import movieous from '../../public/images/movieous.webp'
-import openauth from '../../public/images/openauth.webp'
-import zap from '../../public/images/zap.webp'
+import coind from '../../../public/images/coind.webp'
+import fokus from '../../../public/images/fokus.webp'
+import movieous from '../../../public/images/movieous.webp'
+import openauth from '../../../public/images/openauth.webp'
+import zap from '../../../public/images/zap.webp'
 
 const WorksSection = () => {
   const { t } = useTranslation()

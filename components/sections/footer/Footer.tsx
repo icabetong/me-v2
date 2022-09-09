@@ -1,18 +1,22 @@
-import { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { Trans, useTranslation } from 'next-i18next'
+import Link from 'next/link'
+import { useEffect } from 'react'
 import {
   FiGithub,
+  FiInstagram,
   FiLinkedin,
   FiMail,
   FiTwitter,
-  FiInstagram,
 } from 'react-icons/fi'
-import Box from './core/Box'
-import data from '../data/data.json'
+import { TbGitFork, TbStar } from 'react-icons/tb'
+import { useInView } from 'react-intersection-observer'
+import data from '../../../data/data.json'
+import useGitHub from '../../../shared/hooks/use-github'
+import Box from '../../core/box/Box'
 
 const Footer = () => {
+  const repository = useGitHub('me-v2')
   const { t } = useTranslation('common')
   const control = useAnimation()
   const [ref, isInView] = useInView({
@@ -115,6 +119,22 @@ const Footer = () => {
             }}
           />
         </span>
+        <Link href={`${data.github}/me-v2`}>
+          <div className="flex flex-row mt-2 cursor-pointer px-4 py-2">
+            <div className="flex flex-row items-center justify-center">
+              <TbStar />
+              <span className="mx-2 text-azureish-white">
+                {repository?.stargazersCount}
+              </span>
+            </div>
+            <div className="flex flex-row items-center justify-center">
+              <TbGitFork />
+              <span className="mx-2 text-azureish-white">
+                {repository?.forks}
+              </span>
+            </div>
+          </div>
+        </Link>
       </Box>
     </footer>
   )
