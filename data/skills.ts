@@ -12,57 +12,71 @@ import {
   SiNextdotjs,
   SiExpress,
   SiVuedotjs,
-  SiSvelte
-} from "react-icons/si";
+  SiSvelte,
+} from 'react-icons/si'
 
-export type Skill = "android" | "kotlin" | "java" | "flutter" | "javascript" | "typescript" | "sql" | "mongodb" | "nodejs" | "reactjs" | "nextjs" | "expressjs" | "vuejs" | "svelte"
+export type Skill =
+  | 'android'
+  | 'kotlin'
+  | 'java'
+  | 'flutter'
+  | 'javascript'
+  | 'typescript'
+  | 'sql'
+  | 'mongodb'
+  | 'nodejs'
+  | 'reactjs'
+  | 'nextjs'
+  | 'expressjs'
+  | 'vuejs'
+  | 'svelte'
 
 export const skills: Skill[] = [
-  "android",
-  "kotlin",
-  "java",
-  "flutter",
-  "javascript",
-  "typescript",
-  "sql",
-  "mongodb",
-  "nodejs",
-  "reactjs",
-  "nextjs",
-  "expressjs",
-  "vuejs",
-  "svelte"
+  'android',
+  'kotlin',
+  'java',
+  'flutter',
+  'javascript',
+  'typescript',
+  'sql',
+  'mongodb',
+  'nodejs',
+  'reactjs',
+  'nextjs',
+  'expressjs',
+  'vuejs',
+  'svelte',
 ]
 
 export function getIcon(skill: Skill) {
-  switch(skill) {
-    case "android":
+  switch (skill) {
+    case 'android':
       return SiAndroid
-    case "kotlin":
+    case 'kotlin':
       return SiKotlin
-    case "java":
+    case 'java':
       return SiJava
-    case "flutter":
+    case 'flutter':
       return SiFlutter
-    case "javascript":
+    case 'javascript':
       return SiJavascript
-    case "typescript":
+    case 'typescript':
       return SiTypescript
-    case "sql":
+    case 'sql':
       return SiMysql
-    case "mongodb":
+    case 'mongodb':
       return SiMongodb
-    case "nodejs":
+    case 'nodejs':
       return SiNodedotjs
-    case "reactjs":
+    case 'reactjs':
       return SiReact
-    case "nextjs":
+    case 'nextjs':
       return SiNextdotjs
-    case "expressjs":
+    case 'expressjs':
       return SiExpress
-    case "vuejs":
+    case 'vuejs':
       return SiVuedotjs
-    case "svelte":
+    case 'svelte':
       return SiSvelte
   }
 }

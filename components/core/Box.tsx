@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react"
+import { FC, ReactNode } from 'react'
 
 type BoxProps = {
-  children: ReactNode[] | ReactNode,
-  className?: string,
+  children: ReactNode[] | ReactNode
+  className?: string
 }
 
 const Box: FC<BoxProps> = ({ children, className }) => {
