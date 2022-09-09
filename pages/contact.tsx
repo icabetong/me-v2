@@ -4,9 +4,9 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { HiPaperAirplane } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import Box from '../components/core/Box'
-import Navigation from '../components/navigation/Navigation'
-import Footer from '../components/Footer'
+import Box from '../components/core/box/Box'
+import Navigation from '../components/navigation/navigation-item/Navigation'
+import Footer from '../components/sections/footer/Footer'
 
 const ContactPage: NextPage = () => {
   const { t } = useTranslation('contact')

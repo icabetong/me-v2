@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import { useTranslation } from 'next-i18next'
-import { motion } from 'framer-motion'
-import useBreakpoint from '../../shared/hooks/useBreakpoint'
+import { FC } from "react" 
+import { useTranslation } from "next-i18next"
+import { motion } from "framer-motion"
+import useBreakpoint from "../../../shared/hooks/use-breakpoint"
 
 type NavigationLinkProps = {
   route: string

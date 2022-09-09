@@ -14,10 +14,10 @@ import {
   SiNextdotjs,
 } from 'react-icons/si'
 
-import Card from '../Card'
-import Box from '../core/Box'
+import Card from '../../core/card/Card'
+import Box from '../../core/box/Box'
 
-import data from '../../data/projects.json'
+import data from '../../../data/projects.json'
 
 import fokus from '../../public/images/fokus.webp'
 import coind from '../../public/images/coind.webp'

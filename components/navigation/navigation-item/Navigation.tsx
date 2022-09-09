@@ -2,9 +2,9 @@ import { useState, FC } from 'react'
 import { motion } from 'framer-motion'
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
-import NavigationLink from './NavigationLink'
-import Box from '../core/Box'
-import data from '../../data/data.json'
+import NavigationLink from "../navigation-link/NavigationLink"
+import Box from "../../core/box/Box"
+import data from "../../../data/data.json"
 
 const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
   const [open, setOpen] = useState(false)

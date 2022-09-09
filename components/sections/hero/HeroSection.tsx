@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import { HiOutlineDownload } from 'react-icons/hi'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
-import Box from '../core/Box'
-import data from '../../data/data.json'
-import ParticlesContainer from '../core/ParticlesContainer'
+import Box from '../../core/box/Box'
+import data from '../../../data/data.json'
+import ParticlesContainer from '../../core/particles-container/ParticlesContainer'
 
 const HeroSection = () => {
   const { t } = useTranslation()

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import { useTranslation } from 'next-i18next'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import Box from '../core/Box'
-import { skills, getIcon } from '../../data/skills'
+import React, { useEffect } from "react"
+import { useTranslation } from "next-i18next"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import Box from "../../core/box/Box"
+import { skills, getIcon } from "../../../data/skills"
 
 const SkillsSection = () => {
   const { t } = useTranslation()

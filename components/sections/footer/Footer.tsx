@@ -9,8 +9,8 @@ import {
   FiTwitter,
   FiInstagram,
 } from 'react-icons/fi'
-import Box from './core/Box'
-import data from '../data/data.json'
+import Box from '../../core/box/Box'
+import data from '../../../data/data.json'
 
 const Footer = () => {
   const { t } = useTranslation('common')
