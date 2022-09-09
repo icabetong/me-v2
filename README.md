@@ -5,7 +5,6 @@
 
 The second iteration of my portfolio website with an emphasis on minimalism and simplicity; written in NextJS and React with the styling powers of TailwindCSS.
 
-
 ## Built with
 
 - TypeScript
