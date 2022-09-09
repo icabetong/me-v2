@@ -17,6 +17,7 @@ export default function useBreakpoint(breakpoint: Breakpoint) {
     }
     media.addEventListener('change', listener)
     return () => media.removeEventListener('change', listener)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [breakpoint])
 
   return isMatch
