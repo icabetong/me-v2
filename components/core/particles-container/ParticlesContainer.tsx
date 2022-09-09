@@ -1,7 +1,7 @@
 import Particles from 'react-tsparticles'
-import { loadSlim } from 'tsparticles-slim'
 import { Engine } from 'tsparticles-engine'
-import particlesConfig from '../../shared/particles/config'
+import { loadSlim } from 'tsparticles-slim'
+import particlesConfig from '../../../shared/particles/config'
 
 const ParticlesContainer = () => {
   const onParticlesStart = async (engine: Engine) => loadSlim(engine)

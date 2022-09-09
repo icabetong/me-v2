@@ -1,13 +1,13 @@
-import { useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
-import { motion, useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import Box from "../../core/box/Box"
-import data from "../../../data/data.json"
-import useBreakpoint from "../../../shared/hooks/use-breakpoint"
-import me from "../../public/images/me.webp"
+import data from '../../../data/data.json'
+import me from '../../../public/images/me.webp'
+import useBreakpoint from '../../../shared/hooks/use-breakpoint'
+import Box from '../../core/box/Box'
 
 const AboutSection = () => {
   const { t } = useTranslation()
@@ -68,7 +68,7 @@ const AboutSection = () => {
               >
                 {data.fullName}
               </motion.div>
-              {intro.split('\n').map((paragraph) => {
+              {intro.split('\n').map(paragraph => {
                 return (
                   <motion.p
                     initial="hidden"
