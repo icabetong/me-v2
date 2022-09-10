@@ -1,9 +1,8 @@
-import { useEffect } from 'react'
-import { useTranslation } from 'next-i18next'
 import { motion, useAnimation } from 'framer-motion'
+import { useTranslation } from 'next-i18next'
+import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Box from '../../core/box/Box'
-import data from '../../../data/data.json'
 
 const ContactSection = () => {
   const { t } = useTranslation()
@@ -57,8 +56,7 @@ const ContactSection = () => {
           </motion.p>
           <motion.a
             variants={itemVariants}
-            href={data.mail}
-            target="_blank"
+            href="contact"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, x: '-2px', y: '2px' }}
