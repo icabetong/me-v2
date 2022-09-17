@@ -1,7 +1,7 @@
 import { motion, useAnimation } from 'framer-motion'
 import { Trans, useTranslation } from 'next-i18next'
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import {
   FiGithub,
   FiInstagram,
@@ -12,10 +12,9 @@ import {
 import { TbGitFork, TbStar } from 'react-icons/tb'
 import { useInView } from 'react-intersection-observer'
 import data from '../../../data/data.json'
-import useGitHub from '../../../shared/hooks/use-github'
 
 const Footer = () => {
-  const repository = useGitHub('me-v2')
+  const [repository, setRepository] = useState<RepositoryData | null>(null)
   const { t } = useTranslation('common')
   const control = useAnimation()
   const [ref, isInView] = useInView({
@@ -23,6 +22,16 @@ const Footer = () => {
     root: null,
     threshold: 0.1,
   })
+
+  useEffect(() => {
+    const fetchRepository = async () => {
+      const response = await fetch('/api/github/me-v2')
+      const data = await response.json()
+      setRepository(data)
+    }
+
+    fetchRepository()
+  }, [])
 
   useEffect(() => {
     if (isInView) control.start('visible')
