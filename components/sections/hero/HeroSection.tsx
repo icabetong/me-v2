@@ -44,11 +44,11 @@ const HeroSection = () => {
                 variants={item}
                 className="mb-4 text-6xl md:text-7xl font-clashgrotesk font-medium text-navajo-white"
               >
-                {data.name}
+                {data.fullName}
               </motion.div>
               <motion.div
                 variants={item}
-                className="text-2xl md:text-3xl font-clashgrotesk font-regular text-cornfields"
+                className="text-2xl md:text-3xl font-clashgrotesk font-regular text-azureish-white"
               >
                 {data.position}
               </motion.div>
