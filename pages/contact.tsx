@@ -1,10 +1,9 @@
+import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Head from 'next/head'
 import { HiPaperAirplane } from 'react-icons/hi'
-import { motion } from 'framer-motion'
-import Box from '../components/core/box/Box'
 import Navigation from '../components/navigation/navigation-item/Navigation'
 import Footer from '../components/sections/footer/Footer'
 
@@ -18,7 +17,7 @@ const ContactPage: NextPage = () => {
       </Head>
       <main className="bg-russian text-azureish-white min-h-screen mx-auto flex flex-col">
         <Navigation />
-        <Box className="flex flex-col md:flex-row flex-1 py-24 md:py-32 md:space-x-16">
+        <div className="box flex flex-col md:flex-row flex-1 py-24 md:py-32 md:space-x-16">
           <div className="flex flex-col justify-center space-y-4 flex-1 h-full">
             <h1 className="text-5xl text-navajo-white font-semibold font-inter">
               {t('header')}
@@ -94,7 +93,7 @@ const ContactPage: NextPage = () => {
               </motion.button>
             </form>
           </div>
-        </Box>
+        </div>
       </main>
       <Footer />
     </>

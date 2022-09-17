@@ -7,7 +7,6 @@ import { useInView } from 'react-intersection-observer'
 import data from '../../../data/data.json'
 import me from '../../../public/images/me.webp'
 import useBreakpoint from '../../../shared/hooks/use-breakpoint'
-import Box from '../../core/box/Box'
 
 const AboutSection = () => {
   const { t } = useTranslation()
@@ -27,7 +26,7 @@ const AboutSection = () => {
   const intro = t('about.intro')
   return (
     <section id="about" className="bg-content-900 relative">
-      <Box className="py-32">
+      <div className="box py-32">
         <div ref={ref} className="flex flex-col items-center justify-center">
           <motion.h2
             initial="hidden"
@@ -118,7 +117,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </Box>
+      </div>
     </section>
   )
 }

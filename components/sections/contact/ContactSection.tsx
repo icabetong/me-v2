@@ -2,7 +2,6 @@ import { motion, useAnimation } from 'framer-motion'
 import { useTranslation } from 'next-i18next'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import Box from '../../core/box/Box'
 
 const ContactSection = () => {
   const { t } = useTranslation()
@@ -34,7 +33,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="relative">
-      <Box className="py-16">
+      <div className="box py-16">
         <motion.div
           initial="hidden"
           animate={control}
@@ -65,7 +64,7 @@ const ContactSection = () => {
             {t('button.say-hello')}
           </motion.a>
         </motion.div>
-      </Box>
+      </div>
     </section>
   )
 }

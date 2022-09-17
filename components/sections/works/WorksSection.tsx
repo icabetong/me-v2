@@ -14,7 +14,6 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 
-import Box from '../../core/box/Box'
 import Card from '../../core/card/Card'
 
 import data from '../../../data/projects.json'
@@ -62,7 +61,7 @@ const WorksSection = () => {
 
   return (
     <section id="works" ref={sectionRef} className="bg-content-900 relative">
-      <Box className="py-32">
+      <div className="box py-32">
         <div ref={headingRef} className="mx-14 md:mx-24">
           <motion.h2
             initial="hidden"
@@ -120,7 +119,7 @@ const WorksSection = () => {
             </ul>
           </motion.div>
         </div>
-      </Box>
+      </div>
     </section>
   )
 }

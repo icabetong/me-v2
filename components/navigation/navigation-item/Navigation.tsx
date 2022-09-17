@@ -1,14 +1,13 @@
-import { useState, FC } from 'react'
 import { motion } from 'framer-motion'
+import { FC, useState } from 'react'
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
-import NavigationLink from "../navigation-link/NavigationLink"
-import Box from "../../core/box/Box"
-import data from "../../../data/data.json"
+import data from '../../../data/data.json'
+import NavigationLink from '../navigation-link/NavigationLink'
 
 const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
   const [open, setOpen] = useState(false)
-  const onHandleMenu = () => setOpen((prev) => !prev)
+  const onHandleMenu = () => setOpen(prev => !prev)
 
   const navigationContainer = {
     hidden: { opacity: 1, scale: 0 },
@@ -38,7 +37,7 @@ const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
 
   return (
     <nav className="font-inter relative z-30 border-gray-200 rounded h-fit">
-      <Box>
+      <div className="box">
         <div className="container flex flex-wrap justify-between items-center py-4">
           <motion.a
             href="/"
@@ -86,7 +85,7 @@ const Navigation: FC<NavigationProps> = ({ isAnimated }) => {
         >
           {list}
         </motion.div>
-      </Box>
+      </div>
     </nav>
   )
 }
