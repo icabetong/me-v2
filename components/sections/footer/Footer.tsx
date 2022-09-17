@@ -13,7 +13,6 @@ import { TbGitFork, TbStar } from 'react-icons/tb'
 import { useInView } from 'react-intersection-observer'
 import data from '../../../data/data.json'
 import useGitHub from '../../../shared/hooks/use-github'
-import Box from '../../core/box/Box'
 
 const Footer = () => {
   const repository = useGitHub('me-v2')
@@ -34,7 +33,7 @@ const Footer = () => {
       ref={ref}
       className="bg-footer text-azureish-white relative min-h-md py-8"
     >
-      <Box className="flex flex-col items-center justify-center">
+      <div className="box flex flex-col items-center justify-center">
         <motion.div
           initial="hidden"
           animate={control}
@@ -135,7 +134,7 @@ const Footer = () => {
             </div>
           </div>
         </Link>
-      </Box>
+      </div>
     </footer>
   )
 }

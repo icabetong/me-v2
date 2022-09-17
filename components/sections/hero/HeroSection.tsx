@@ -1,9 +1,8 @@
-import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
-import { HiOutlineDownload } from 'react-icons/hi'
+import { useTranslation } from 'next-i18next'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { HiOutlineDownload } from 'react-icons/hi'
 
-import Box from '../../core/box/Box'
 import data from '../../../data/data.json'
 import ParticlesContainer from '../../core/particles-container/ParticlesContainer'
 
@@ -18,7 +17,7 @@ const HeroSection = () => {
   return (
     <section className="relative">
       <ParticlesContainer />
-      <Box className="relative">
+      <div className="box relative">
         <div className="py-40 md:py-60">
           <motion.div
             initial="hidden"
@@ -111,7 +110,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
         </div>
-      </Box>
+      </div>
     </section>
   )
 }

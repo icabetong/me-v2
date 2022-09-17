@@ -1,9 +1,8 @@
-import React, { useEffect } from "react"
-import { useTranslation } from "next-i18next"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import Box from "../../core/box/Box"
-import { skills, getIcon } from "../../../data/skills"
+import { motion, useAnimation } from 'framer-motion'
+import { useTranslation } from 'next-i18next'
+import React, { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { getIcon, skills } from '../../../data/skills'
 
 const SkillsSection = () => {
   const { t } = useTranslation()
@@ -22,7 +21,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="relative">
-      <Box className="py-16 md:py-32 flex flex-col items-center justify-center md:flex-row">
+      <div className="box py-16 md:py-32 flex flex-col items-center justify-center md:flex-row">
         <div ref={ref} className="flex-initial md:ml-24">
           <motion.h2
             ref={ref}
@@ -63,7 +62,7 @@ const SkillsSection = () => {
             }}
             className="grid grid-cols-3 md:grid-cols-4 gap-4 mt-12 md:mt-0"
           >
-            {skills.map((skill) => {
+            {skills.map(skill => {
               return (
                 <motion.li
                   key={skill}
@@ -86,7 +85,7 @@ const SkillsSection = () => {
             })}
           </motion.ul>
         </div>
-      </Box>
+      </div>
     </section>
   )
 }
