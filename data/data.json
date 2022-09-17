@@ -12,5 +12,6 @@
   "mail": "mailto:isaiahcollins_02@live.com",
   "twitter": "https://www.twitter.com/icabetong",
   "instagram": "https://www.instagram.com/izayakorinzu/",
-  "image": "https://raw.githubusercontent.com/icabetong/me/main/public/images/image-meta.png"
+  "image": "https://raw.githubusercontent.com/icabetong/me/main/public/images/image-meta.png",
+  "projects": ["fokus-android", "coind", "openauth", "zap", "movieous"]
 }
