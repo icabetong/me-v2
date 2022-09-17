@@ -36,19 +36,19 @@ const HeroSection = () => {
             <div className="flex flex-col py-0 flex-grow space-y-2 md:space-y-4">
               <motion.div
                 variants={item}
-                className="my-2 text-3xl font-firacode font-medium text-azureish-white"
+                className="my-2 text-3xl font-inter font-medium text-azureish-white"
               >
                 {t('hero.greet')}
               </motion.div>
               <motion.div
                 variants={item}
-                className="mb-4 text-6xl md:text-7xl font-firacode font-medium text-aquamarine"
+                className="mb-4 text-6xl md:text-7xl font-clashgrotesk font-medium text-navajo-white"
               >
                 {data.name}
               </motion.div>
               <motion.div
                 variants={item}
-                className="text-2xl font-firacode font-semibold text-cornfields"
+                className="text-2xl md:text-3xl font-clashgrotesk font-regular text-cornfields"
               >
                 {data.position}
               </motion.div>

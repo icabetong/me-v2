@@ -62,7 +62,7 @@ const WorksSection = () => {
   return (
     <section id="works" ref={sectionRef} className="bg-content-900 relative">
       <div className="box py-32">
-        <div ref={headingRef} className="mx-14 md:mx-24">
+        <div ref={headingRef}>
           <motion.h2
             initial="hidden"
             animate={headingAnim}

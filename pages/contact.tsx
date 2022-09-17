@@ -19,7 +19,7 @@ const ContactPage: NextPage = () => {
         <Navigation />
         <div className="box flex flex-col md:flex-row flex-1 py-24 md:py-32 md:space-x-16">
           <div className="flex flex-col justify-center space-y-4 flex-1 h-full">
-            <h1 className="text-5xl text-navajo-white font-semibold font-inter">
+            <h1 className="text-6xl text-navajo-white font-semibold font-clashgrotesk">
               {t('header')}
             </h1>
             <h2 className="text-52xl text-azureish-white font-medium font-inter">

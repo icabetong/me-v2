@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import data from '../../../data/data.json'
 import me from '../../../public/images/me.webp'
 import useBreakpoint from '../../../shared/hooks/use-breakpoint'
 
@@ -41,32 +40,12 @@ const AboutSection = () => {
                 },
               },
             }}
-            className="mb-4 font-semibold font-inter text-3xl text-azureish-white"
+            className="mb-4 font-semibold font-inter text-3xl text-navajo-white"
           >
             {t('section.about')}
           </motion.h2>
-          <div className="flex flex-col-reverse items-center justify-center lg:flex-row mt-8 mx-14 lg:mx-24">
+          <div className="flex flex-col-reverse items-center justify-center lg:flex-row mt-8">
             <div className="flex-3 flex flex-col items-center justify-center lg:items-start lg:mr-14">
-              <motion.div
-                initial="hidden"
-                animate={control}
-                variants={{
-                  hidden: { y: 20, opacity: 0 },
-                  visible: {
-                    y: 0,
-                    opacity: 1,
-                    transition: {
-                      delay: 0.6,
-                      type: 'spring',
-                      bounce: 0.6,
-                      duration: 2,
-                    },
-                  },
-                }}
-                className="max-w-sm mt-8 text-3xl text-navajo-white font-firacode mb-8 text-center lg:mt-0 lg:text-start md:text-4xl"
-              >
-                {data.fullName}
-              </motion.div>
               {intro.split('\n').map(paragraph => {
                 return (
                   <motion.p
@@ -111,7 +90,7 @@ const AboutSection = () => {
                   width="256"
                   height="256"
                   priority={true}
-                  className="rounded-xl"
+                  className="rounded-full"
                 />
               </motion.div>
             </div>

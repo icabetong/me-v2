@@ -22,7 +22,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="relative">
       <div className="box py-16 md:py-32 flex flex-col items-center justify-center md:flex-row">
-        <div ref={ref} className="flex-initial md:ml-24">
+        <div ref={ref} className="flex-initial">
           <motion.h2
             ref={ref}
             initial="hidden"

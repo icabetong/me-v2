@@ -1,9 +1,9 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 import { useTranslation } from 'next-i18next'
 import Image, { StaticImageData } from 'next/image'
-import { motion } from 'framer-motion'
-import { SiGithub } from 'react-icons/si'
+import React from 'react'
 import { IconType } from 'react-icons'
+import { SiGithub } from 'react-icons/si'
 
 type CardProps = {
   name: string
@@ -86,15 +86,15 @@ const Card: React.FC<CardProps> = ({
       <div className="h-76 overflow-hidden">
         <Image priority src={image} alt={t('alt.screenshot', { name: name })} />
       </div>
-      <motion.div className="mt-2 mb-4 font-firacode font-semibold text-xl text-navajo-white flex flex-row items-center justify-center">
+      <motion.div className="mt-2 mb-4 font-clashgrotesk font-medium text-2xl text-navajo-white flex flex-row items-center justify-center">
         <motion.div variants={nameVariants}>{name}</motion.div>
         <motion.div
           variants={linkVariants}
           whileHover={{ scale: 1.1 }}
           className="grid grid-cols-2 gap-3"
         >
-          {frameworks.map((icon) =>
-            React.createElement(icon, { key: icon.toString() })
+          {frameworks.map(icon =>
+            React.createElement(icon, { key: icon.toString() }),
           )}
         </motion.div>
       </motion.div>

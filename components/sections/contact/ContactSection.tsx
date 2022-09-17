@@ -43,7 +43,7 @@ const ContactSection = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="mb-4 text-4xl text-navajo-white text-center font-inter font-semibold"
+            className="mb-4 text-5xl text-navajo-white text-center font-clashgrotesk font-semibold"
           >
             {t('contact.header')}
           </motion.h2>

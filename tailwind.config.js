@@ -11,11 +11,10 @@ module.exports = {
       fontFamily: {
         firacode: ['Fira Code'],
         inter: ['Inter'],
+        clashgrotesk: ['Clash Grotesk'],
       },
       colors: {
         russian: '#0E0E14',
-        aquamarine: '#69F0AE',
-        cornfields: '#FFF9B8',
         'azureish-white': '#DBEDF3',
         'navajo-white': '#acdbff',
         content: {
