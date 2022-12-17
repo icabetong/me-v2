@@ -127,22 +127,24 @@ const Footer = () => {
             }}
           />
         </span>
-        <Link href={`${data.github}/me-v2`}>
-          <div className="flex flex-row mt-2 cursor-pointer px-4 py-2">
-            <div className="flex flex-row items-center justify-center">
-              <TbStar />
-              <span className="mx-2 text-azureish-white">
-                {repository?.stargazersCount}
-              </span>
+        {repository && (
+          <Link href={`${data.github}/me-v2`}>
+            <div className="flex flex-row mt-2 cursor-pointer px-4 py-2">
+              <div className="flex flex-row items-center justify-center">
+                <TbStar />
+                <span className="mx-2 text-azureish-white">
+                  {repository?.stargazersCount}
+                </span>
+              </div>
+              <div className="flex flex-row items-center justify-center">
+                <TbGitFork />
+                <span className="mx-2 text-azureish-white">
+                  {repository?.forks}
+                </span>
+              </div>
             </div>
-            <div className="flex flex-row items-center justify-center">
-              <TbGitFork />
-              <span className="mx-2 text-azureish-white">
-                {repository?.forks}
-              </span>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        )}
       </div>
     </footer>
   )
