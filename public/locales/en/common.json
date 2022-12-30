@@ -43,6 +43,7 @@
     "fokus": "Reminder app for tasks and events tailored specifically for students",
     "coind": "A realtime crypocurrency information app built using Flutter.",
     "openauth": "A beautiful, secure and simple authenticator app that supports multiple protocols and services",
+    "kantina": "A small e-commerce website for the stalls inside the universities",
     "movieous": "A sample theater reservation client built using React and Chakra-UI",
     "zap": "A simple, easy to use and private file sharing service which utilizes the AnonFiles API service"
   },

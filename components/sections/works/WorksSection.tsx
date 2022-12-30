@@ -11,6 +11,7 @@ import {
   SiKotlin,
   SiNextdotjs,
   SiReact,
+  SiSvelte,
   SiTypescript,
 } from 'react-icons/si'
 
@@ -20,6 +21,7 @@ import data from '../../../data/projects.json'
 
 import coind from '../../../public/images/coind.webp'
 import fokus from '../../../public/images/fokus.webp'
+import kantina from '../../../public/images/kantina.webp'
 import movieous from '../../../public/images/movieous.webp'
 import openauth from '../../../public/images/openauth.webp'
 import zap from '../../../public/images/zap.webp'
@@ -102,6 +104,13 @@ const WorksSection = () => {
             </ul>
             <div className="py-8" />
             <ul className="grid grid-cols-1 gap-8">
+              <Card
+                name={data.kantina.name}
+                description={data.kantina.description}
+                image={kantina}
+                frameworks={[SiSvelte, SiTypescript]}
+                repo={data.kantina.repo}
+              />
               <Card
                 name={data.movieous.name}
                 description={data.movieous.description}
